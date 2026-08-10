@@ -3,3 +3,6 @@ node_modules/
 .vscode/
 .idea/
 *.log
+.playwright-cli/
+hdc-fullpage.png
+hdc-section2.png

@@ -33,36 +33,26 @@
         </div>
     </header>
 
-    <!-- 主视觉 Hero -->
+    <!-- 主视觉 Hero · HDC 风格极简居中 -->
     <section class="hero" id="home">
         <div class="hero-bg">
-            <div class="hero-gradient"></div>
             <canvas class="hero-canvas" id="heroCanvas"></canvas>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge">建筑产业互联网年度盛会</div>
+        <div class="hero-content reveal-up">
+            <div class="hero-eyebrow">建筑产业互联网年度盛会</div>
             <h1 class="hero-title">
                 <span class="title-line">2026 云顶大会</span>
                 <span class="title-sub">从「联接」走向「价值共创」</span>
             </h1>
-            <p class="hero-desc">让贡献被看见，让价值被认可。<br>引导资源流向真正创造价值的环节，凝聚全行业价值共识。</p>
-            <div class="hero-info">
-                <div class="info-item">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    <span>2026年9月8日</span>
-                </div>
-                <div class="info-item">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>深圳国际会展中心 · 18号馆</span>
-                </div>
-            </div>
+            <div class="hero-divider"></div>
+            <p class="hero-meta">2026年9月8日 · 深圳国际会展中心 · 18号馆</p>
             <div class="hero-actions">
                 <a href="#about" class="btn btn-primary">了解大会</a>
                 <a href="#schedule" class="btn btn-outline">查看日程</a>
             </div>
         </div>
         <!-- 倒计时 -->
-        <div class="countdown" id="countdown">
+        <div class="countdown reveal-up" id="countdown" data-delay="200">
             <div class="countdown-item"><span class="count-num" id="countDays">00</span><span class="count-label">天</span></div>
             <div class="countdown-divider"></div>
             <div class="countdown-item"><span class="count-num" id="countHours">00</span><span class="count-label">时</span></div>
@@ -404,8 +394,8 @@
                                     <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                                 </div>
                             </div>
-                            <div class="review-year">2025</div>
                             <div class="review-content">
+                                <div class="review-year-bg">2025</div>
                                 <div class="review-location">成都 · 天府国际会议中心</div>
                                 <h4>「联接 让孤岛成为大陆」</h4>
                                 <p>近1500人参会，发布云筑人员实时定位管理解决方案2.0、云智采1.0、云筑寻源平台等新产品。超级供需洽谈会发布近400亿元采购需求，企业对接超2300次。</p>
@@ -423,8 +413,8 @@
                                     <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                                 </div>
                             </div>
-                            <div class="review-year">2024</div>
                             <div class="review-content">
+                                <div class="review-year-bg">2024</div>
                                 <div class="review-location">青岛 · 建筑数字化创新论坛</div>
                                 <h4>「沿着旧地图，找不到新大陆」</h4>
                                 <p>超2000位政府领导、专家智库、企业领袖参会。山东省住建厅、中国建筑业协会指导，聚焦建筑行业数字化前沿技术与发展趋势。</p>
@@ -513,70 +503,110 @@
         </div>
     </section>
 
-    <!-- 合作伙伴 -->
+    <!-- 合作伙伴 · HDC 风格分层卡片 -->
     <section class="section" id="partners">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-up">
                 <span class="section-tag">Partners</span>
                 <h2 class="section-title">合作伙伴</h2>
-                <p class="section-desc">携手行业领军企业，共创建筑数字化生态</p>
+                <p class="section-desc">携手行业领军力量，共创建筑数字化新生态</p>
             </div>
-            <div class="partners-category">
-                <h4>指导单位</h4>
-                <div class="partners-row">
-                    <div class="partner-logo">中国施工企业管理协会</div>
-                    <div class="partner-logo">中国建筑集团（广州）总部</div>
+            <div class="partners-wrap">
+                <!-- 主办单位 -->
+                <div class="partners-tier reveal-up" data-delay="100">
+                    <div class="partners-tier-head">
+                        <span class="partners-tier-label">主办单位</span>
+                        <div class="partners-tier-line"></div>
+                    </div>
+                    <div class="partners-grid tier-headline">
+                        <div class="partner-card tier-headline-card is-logo">云筑</div>
+                        <div class="partner-card tier-headline-card is-logo">中建电子商务有限责任公司</div>
+                    </div>
                 </div>
-            </div>
-            <div class="partners-category">
-                <h4>协办单位</h4>
-                <div class="partners-row">
-                    <div class="partner-logo">中国建筑第四工程局有限公司</div>
+                <!-- 指导单位 -->
+                <div class="partners-tier reveal-up" data-delay="200">
+                    <div class="partners-tier-head">
+                        <span class="partners-tier-label">指导单位</span>
+                        <div class="partners-tier-line"></div>
+                    </div>
+                    <div class="partners-grid tier-strategic">
+                        <div class="partner-card">中国施工企业管理协会</div>
+                        <div class="partner-card">中国建筑集团（广州）总部</div>
+                    </div>
                 </div>
-            </div>
-            <div class="partners-category">
-                <h4>生态合作伙伴</h4>
-                <div class="partners-row">
-                    <div class="partner-logo">华为</div>
-                    <div class="partner-logo">腾讯云</div>
-                    <div class="partner-logo">阿里云</div>
-                    <div class="partner-logo">广联达</div>
-                    <div class="partner-logo">中建科工</div>
-                    <div class="partner-logo">远大住工</div>
+                <!-- 协办单位 -->
+                <div class="partners-tier reveal-up" data-delay="300">
+                    <div class="partners-tier-head">
+                        <span class="partners-tier-label">协办单位</span>
+                        <div class="partners-tier-line"></div>
+                    </div>
+                    <div class="partners-grid tier-general">
+                        <div class="partner-card">中国建筑第四工程局有限公司</div>
+                    </div>
                 </div>
-            </div>
-            <div class="partners-category">
-                <h4>媒体合作伙伴</h4>
-                <div class="partners-row">
-                    <div class="partner-logo">建筑时报</div>
-                    <div class="partner-logo">中国建设报</div>
-                    <div class="partner-logo">36氪</div>
-                    <div class="partner-logo">建筑学报</div>
+                <!-- 生态合作伙伴 -->
+                <div class="partners-tier reveal-up" data-delay="400">
+                    <div class="partners-tier-head">
+                        <span class="partners-tier-label">生态合作伙伴</span>
+                        <div class="partners-tier-line"></div>
+                    </div>
+                    <div class="partners-grid tier-general">
+                        <div class="partner-card">华为</div>
+                        <div class="partner-card">腾讯云</div>
+                        <div class="partner-card">阿里云</div>
+                        <div class="partner-card">广联达</div>
+                        <div class="partner-card">中建科工</div>
+                        <div class="partner-card">远大住工</div>
+                    </div>
+                </div>
+                <!-- 媒体合作伙伴 -->
+                <div class="partners-tier reveal-up" data-delay="500">
+                    <div class="partners-tier-head">
+                        <span class="partners-tier-label">媒体合作伙伴</span>
+                        <div class="partners-tier-line"></div>
+                    </div>
+                    <div class="partners-grid tier-media">
+                        <div class="partner-card">建筑时报</div>
+                        <div class="partner-card">中国建设报</div>
+                        <div class="partner-card">36氪</div>
+                        <div class="partner-card">建筑学报</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 底部 -->
+    <!-- 底部 · HDC 风格多列信息结构 -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+        <div class="footer-inner">
+            <div class="footer-top">
                 <div class="footer-brand">
                     <img src="logo.png" alt="2026云顶大会" class="footer-logo-img">
                     <p>从「联接」走向「价值共创」<br>让贡献被看见，让价值被认可</p>
                 </div>
-                <div class="footer-links">
-                    <h4>快速导航</h4>
-                    <a href="#about">大会介绍</a>
-                    <a href="#schedule">活动日程</a>
-                    <a href="#guests">活动嘉宾</a>
-                    <a href="#guide">参会指南</a>
-                    <a href="#review">往届回顾</a>
+                <div class="footer-col">
+                    <h5>快速导航</h5>
+                    <ul>
+                        <li><a href="#about">大会介绍</a></li>
+                        <li><a href="#schedule">活动日程</a></li>
+                        <li><a href="#guests">活动嘉宾</a></li>
+                        <li><a href="#guide">参会指南</a></li>
+                        <li><a href="#review">往届回顾</a></li>
+                    </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>联系方式</h4>
-                    <a href="mailto:info@yunding2026.com">info@yunding2026.com</a>
-                    <a href="tel:13651280421">路先生 13651280421</a>
+                <div class="footer-col">
+                    <h5>联系方式</h5>
+                    <ul>
+                        <li><a href="mailto:info@yunding2026.com">info@yunding2026.com</a></li>
+                        <li><a href="tel:13651280421">路先生 13651280421</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>主办单位</h5>
+                    <ul>
+                        <li><a href="#">云筑</a></li>
+                        <li><a href="#">中建电子商务有限责任公司</a></li>
+                    </ul>
                 </div>
                 <div class="footer-qr">
                     <div class="qr-placeholder">
@@ -587,7 +617,10 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 云筑（中建电子商务有限责任公司） 版权所有</p>
-                <p>主办方：云筑 | 云顶大会组委会</p>
+                <div class="footer-legal">
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                </div>
             </div>
         </div>
     </footer>

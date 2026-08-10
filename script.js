@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel('videoCarousel', 'videoTrack', 'videoPrev', 'videoNext', 'videoDots');
     initHeroParticles();
     initSmoothScroll();
+    initScrollReveal();
 });
 
 /* ===== 顶部导航栏滚动效果 ===== */
@@ -362,7 +363,7 @@ function initHeroParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(180, 20, 40, ${this.opacity})`;
+            ctx.fillStyle = `rgba(29, 78, 216, ${this.opacity})`;
             ctx.fill();
         }
     }
@@ -389,7 +390,7 @@ function initHeroParticles() {
                     ctx.beginPath();
                     ctx.moveTo(p1.x, p1.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(180, 20, 40, ${0.03 * (1 - dist / 150)})`;
+                    ctx.strokeStyle = `rgba(29, 78, 216, ${0.03 * (1 - dist / 150)})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
@@ -419,4 +420,24 @@ function initSmoothScroll() {
             window.scrollTo({ top, behavior: 'smooth' });
         });
     });
+}
+
+/* ===== 滚动渐入动画（Intersection Observer） ===== */
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal-up');
+    if (!reveals.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    reveals.forEach(el => observer.observe(el));
 }
