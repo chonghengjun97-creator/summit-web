@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026云顶大会 · 从「联接」走向「价值共创」</title>
+    <meta name="description" content="2026云顶大会 - 建筑产业从联接走向价值共创，深圳国际会展中心">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="2026云顶大会" class="logo-img">
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="#about" class="nav-link">大会介绍</a>
+                <a href="#schedule" class="nav-link">活动日程</a>
+                <a href="#guests" class="nav-link">活动嘉宾</a>
+                <a href="#guide" class="nav-link">参会指南</a>
+                <a href="#review" class="nav-link">往届回顾</a>
+                <a href="#video" class="nav-link">精彩视频</a>
+                <a href="#partners" class="nav-link">合作伙伴</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主视觉 Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">建筑产业互联网年度盛会</div>
+            <h1 class="hero-title">
+                <span class="title-line">2026 云顶大会</span>
+                <span class="title-sub">从「联接」走向「价值共创」</span>
+            </h1>
+            <p class="hero-desc">让贡献被看见，让价值被认可。<br>引导资源流向真正创造价值的环节，凝聚全行业价值共识。</p>
+            <div class="hero-info">
+                <div class="info-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>2026年9月8日</span>
+                </div>
+                <div class="info-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>深圳国际会展中心 · 18号馆</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-primary">了解大会</a>
+                <a href="#schedule" class="btn btn-outline">查看日程</a>
+            </div>
+        </div>
+        <!-- 倒计时 -->
+        <div class="countdown" id="countdown">
+            <div class="countdown-item"><span class="count-num" id="countDays">00</span><span class="count-label">天</span></div>
+            <div class="countdown-divider"></div>
+            <div class="countdown-item"><span class="count-num" id="countHours">00</span><span class="count-label">时</span></div>
+            <div class="countdown-divider"></div>
+            <div class="countdown-item"><span class="count-num" id="countMins">00</span><span class="count-label">分</span></div>
+            <div class="countdown-divider"></div>
+            <div class="countdown-item"><span class="count-num" id="countSecs">00</span><span class="count-label">秒</span></div>
+        </div>
+        <div class="scroll-hint">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+    </section>
+
+    <!-- 大会介绍 -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">大会介绍</h2>
+                <p class="section-desc">从「联接」走向「价值共创」，让贡献被看见，让价值被认可</p>
+            </div>
+            <div class="about-intro">
+                <p>当前，建筑行业正处于深刻变革与系统性重塑的关键时期，正从"规模红利"滑向"存量博弈"。行业数字化、生态化协同已取得显著进展，但一个更深层的命题亟待回答：<strong>联接之后，价值何往？</strong></p>
+                <p>2026云顶大会致力于推动建筑产业从"联接"走向"价值共创"，与生态伙伴共同探讨如何让贡献被看见、价值被认可，引导资源流向真正创造价值的环节。通过分享行业实践案例、促成实质性供需合作与生态共创，凝聚全行业价值共识。</p>
+                <div class="about-organizers">
+                    <div class="org-item"><span class="org-label">指导单位</span><span>中国施工企业管理协会</span><span>中国建筑集团有限公司（广州）总部</span></div>
+                    <div class="org-item"><span class="org-label">主办单位</span><span>云筑（中建电子商务有限责任公司）</span></div>
+                    <div class="org-item"><span class="org-label">协办单位</span><span>中国建筑第四工程局有限公司</span></div>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>大会主题</h3>
+                    <p>「从联接走向价值共创」—— 聚焦AI与建筑产业深度融合，探讨数字供应链、智慧劳务、AI大模型等实践成果，推动行业从价格战转向价值战。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h3>大咖云集</h3>
+                    <p>邀请知名经济学家、行业专家学者及领军企业代表，围绕建筑产业新质生产力、智能建造、数字化转型及AI大模型应用等前沿议题展开深度分享。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>活动形式</h3>
+                    <p>主题演讲 + 圆桌论坛 + 超级供需洽谈会 + 展览展示 + 颁奖仪式，全方位呈现建筑数智化前沿实践与生态共创成果。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>核心议题</h3>
+                    <p>建筑产业新质生产力、智能建造、绿色建造、数字供应链、AI大模型应用、数字化转型及产业升级等热点方向。</p>
+                </div>
+            </div>
+            <div class="stats-row">
+                <div class="stat-item"><span class="stat-num">2000+</span><span class="stat-label">参会嘉宾</span></div>
+                <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">主题演讲</span></div>
+                <div class="stat-item"><span class="stat-num">100+</span><span class="stat-label">参展企业</span></div>
+                <div class="stat-item"><span class="stat-num">百亿级</span><span class="stat-label">供需对接</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动日程 -->
+    <section class="section" id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Schedule</span>
+                <h2 class="section-title">活动日程</h2>
+                <p class="section-desc">9月8日，一天精彩议程</p>
+            </div>
+            <div class="schedule-content" id="scheduleContent">
+                <div class="schedule-day active">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">08:00 - 08:40</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-tag">主会场</span>
+                                <h4>参会人员签到</h4>
+                                <p>凭报名确认信息换取参会证入场</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">08:40 - 09:10</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-tag highlight">特别</span>
+                                <h4>领导巡展</h4>
+                                <p>指导单位、主办方领导参观展览区</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">09:10 - 09:30</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-tag">主会场</span>
+                                <h4>大会开幕 & 领导致辞</h4>
+                                <p>指导单位与主办方领导致辞</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">09:30 - 12:00</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-tag">主会场</span>
+                                <h4>主旨演讲 & 嘉宾分享</h4>
+                                <p>围绕智能建造、AI与建筑产业融合等议题展开深度分享</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">14:00 - 17:30</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-tag">分会场</span>
+                                <h4>平行分论坛 & 深度研讨</h4>
+                                <p>聚焦建筑行业AI实践和智能建造前沿方向</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">18:30 - 20:30</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <span class="timeline-tag highlight">社交</span>
+                                <h4>大会晚宴 & 交流</h4>
+                                <p>与行业同仁深度交流，共话合作机遇</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动嘉宾 -->
+    <section class="section" id="guests">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Guests</span>
+                <h2 class="section-title">演讲嘉宾</h2>
+                <p class="section-desc">行业领袖齐聚，共话建筑产业新未来</p>
+            </div>
+            <div class="guests-empty">
+                <div class="guests-empty-icon">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <p>演讲嘉宾信息持续确认中，敬请期待</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 参会指南 -->
+    <section class="section" id="guide">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Guide</span>
+                <h2 class="section-title">参会指南</h2>
+                <p class="section-desc">全方位参会服务，让您的行程无忧</p>
+            </div>
+            <div class="guide-tabs" id="guideTabs">
+                <button class="tab-btn active" data-tab="traffic">交通出行</button>
+                <button class="tab-btn" data-tab="hotel">住宿推荐</button>
+                <button class="tab-btn" data-tab="food">餐饮指南</button>
+                <button class="tab-btn" data-tab="faq">常见问题</button>
+            </div>
+            <div class="guide-content" id="guideContent">
+                <div class="guide-panel active" data-tab="traffic">
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <div class="guide-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <h4>地铁出行（推荐）</h4>
+                            <ul>
+                                <li>地铁12号线 / 20号线 → 国展站 C出口</li>
+                                <li>步行约5分钟即可到达展馆</li>
+                                <li>运营时间：06:30 - 23:00</li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <div class="guide-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                            <h4>自驾 / 打车</h4>
+                            <ul>
+                                <li>导航至「深圳国际会展中心18号馆」</li>
+                                <li>广深沿江高速 → 国际会展中心出口</li>
+                                <li>展馆设有充足停车位（P1-P5停车场）</li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <div class="guide-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l9 4.5v3L12 14 3 9.5v-3L12 2z"/><path d="M3 14.5l9 4.5 9-4.5"/><path d="M3 9.5l9 4.5 9-4.5"/></svg>
+                            </div>
+                            <h4>机场 / 高铁</h4>
+                            <ul>
+                                <li>深圳宝安国际机场 → 展馆约15km（打车约30分钟）</li>
+                                <li>深圳北站 → 展馆约35km（地铁约50分钟）</li>
+                                <li>福田站 → 展馆约30km（地铁约45分钟）</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="guide-map">
+                        <div class="map-placeholder">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <p>深圳国际会展中心 · 18号馆</p>
+                            <p class="map-address">广东省深圳市宝安区福海街道和平社区展城路1号</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-panel" data-tab="hotel">
+                    <div class="hotel-list">
+                        <div class="hotel-card">
+                            <div class="hotel-header">
+                                <h4>深圳国际会展中心洲际酒店</h4>
+                                <span class="hotel-level">★★★★★</span>
+                            </div>
+                            <p class="hotel-dist">距展馆约0.5km · 步行5分钟</p>
+                            <p class="hotel-desc">大会官方合作酒店，提供专属协议价，含早餐及接驳服务</p>
+                            <span class="hotel-price">参考价：¥1,200-1,800/晚</span>
+                        </div>
+                        <div class="hotel-card">
+                            <div class="hotel-header">
+                                <h4>深圳国际会展中心希尔顿酒店</h4>
+                                <span class="hotel-level">★★★★★</span>
+                            </div>
+                            <p class="hotel-dist">距展馆约1km · 步行12分钟</p>
+                            <p class="hotel-desc">毗邻展馆，设施完善，提供商务中心及会议服务</p>
+                            <span class="hotel-price">参考价：¥900-1,500/晚</span>
+                        </div>
+                        <div class="hotel-card">
+                            <div class="hotel-header">
+                                <h4>深圳宝安福朋喜来登酒店</h4>
+                                <span class="hotel-level">★★★★</span>
+                            </div>
+                            <p class="hotel-dist">距展馆约3km · 车程10分钟</p>
+                            <p class="hotel-desc">高性价比选择，周边配套齐全，交通便利</p>
+                            <span class="hotel-price">参考价：¥600-900/晚</span>
+                        </div>
+                        <div class="hotel-card">
+                            <div class="hotel-header">
+                                <h4>深圳宝安亚朵酒店</h4>
+                                <span class="hotel-level">★★★★</span>
+                            </div>
+                            <p class="hotel-dist">距展馆约4km · 车程12分钟</p>
+                            <p class="hotel-desc">商务出行优选，设计感强，阅读空间舒适</p>
+                            <span class="hotel-price">参考价：¥500-800/晚</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-panel" data-tab="food">
+                    <div class="food-grid">
+                        <div class="food-card">
+                            <h4>展馆内餐饮</h4>
+                            <p>展馆一层、二层设有多处餐饮区，提供中式快餐、西式简餐、咖啡饮品等。大会期间凭参展证可在指定餐厅享受折扣。</p>
+                            <span class="food-time">营业时间：08:00 - 19:00</span>
+                        </div>
+                        <div class="food-card">
+                            <h4>周边美食商圈</h4>
+                            <p>展馆周边3公里内有福永海鲜美食街、沙井京基百纳广场等餐饮集中区，涵盖粤菜、湘菜、火锅、日料等多种选择。</p>
+                            <span class="food-time">建议车程：5-15分钟</span>
+                        </div>
+                        <div class="food-card">
+                            <h4>大会茶歇</h4>
+                            <p>主会场及各分会场外设有茶歇区，全天供应咖啡、茶饮、水果及点心，凭参会证件免费享用。</p>
+                            <span class="food-time">全天供应</span>
+                        </div>
+                        <div class="food-card">
+                            <h4>商务宴请推荐</h4>
+                            <p>推荐宝安区星级酒店中餐厅（洲际、希尔顿等），适合商务宴请，建议提前预订包间。</p>
+                            <span class="food-time">需提前预约</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-panel" data-tab="faq">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>大会是否有线上直播？</span>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer"><p>是的，大会主会场及部分分论坛将提供线上直播。直播链接将在大会开幕前一周通过官方公众号发布，敬请关注。</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>是否需要携带证件入场？</span>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer"><p>请携带本人有效身份证件（身份证/护照），现场凭报名确认信息换取参会证入场。</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>大会是否有同声传译？</span>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer"><p>主会场提供中英双语同声传译服务，请在入场时凭身份证件领取同传设备。</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>会场是否有行李寄存服务？</span>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer"><p>展馆入口处设有行李寄存柜台，凭参会证可免费寄存行李。寄存时间为每日 08:00 - 20:00。</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>大会是否有会议咨询联系方式？</span>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer"><p>会议咨询请联系：路先生 13651280421，或发送邮件至 info@yunding2026.com。</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 往届回顾 -->
+    <section class="section" id="review">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">History</span>
+                <h2 class="section-title">往届回顾</h2>
+                <p class="section-desc">每一届都是一次跨越，见证建筑产业数字化征程</p>
+            </div>
+            <div class="carousel" id="reviewCarousel">
+                <div class="carousel-track" id="reviewTrack">
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img-review-2025.jpg" alt="2025云顶大会 成都" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                                <div class="review-image-placeholder">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                </div>
+                            </div>
+                            <div class="review-year">2025</div>
+                            <div class="review-content">
+                                <div class="review-location">成都 · 天府国际会议中心</div>
+                                <h4>「联接 让孤岛成为大陆」</h4>
+                                <p>近1500人参会，发布云筑人员实时定位管理解决方案2.0、云智采1.0、云筑寻源平台等新产品。超级供需洽谈会发布近400亿元采购需求，企业对接超2300次。</p>
+                                <div class="review-stats">
+                                    <span>1500+ 参会</span><span>400亿 采购需求</span><span>2300+ 对接</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <div class="review-image">
+                                <img src="img-review-2024.jpg" alt="2024云顶大会 青岛" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder')">
+                                <div class="review-image-placeholder">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                </div>
+                            </div>
+                            <div class="review-year">2024</div>
+                            <div class="review-content">
+                                <div class="review-location">青岛 · 建筑数字化创新论坛</div>
+                                <h4>「沿着旧地图，找不到新大陆」</h4>
+                                <p>超2000位政府领导、专家智库、企业领袖参会。山东省住建厅、中国建筑业协会指导，聚焦建筑行业数字化前沿技术与发展趋势。</p>
+                                <div class="review-stats">
+                                    <span>2000+ 参会</span><span>50+ 展位</span><span>8+ 合作签约</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" id="reviewPrev" aria-label="上一届">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="carousel-arrow carousel-next" id="reviewNext" aria-label="下一届">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="carousel-dots" id="reviewDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精彩视频 -->
+    <section class="section" id="video">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Video</span>
+                <h2 class="section-title">精彩视频</h2>
+                <p class="section-desc">回顾往届大会精彩瞬间，感受建筑产业的澎湃力量</p>
+            </div>
+            <div class="carousel" id="videoCarousel">
+                <div class="carousel-track" id="videoTrack">
+                    <div class="carousel-slide">
+                        <div class="video-card" data-video="2026">
+                            <div class="video-thumb">
+                                <img src="img-video-2026.jpg" alt="2026云顶大会宣传片" onerror="this.style.display='none'">
+                                <div class="video-overlay">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+                                </div>
+                                <div class="video-badge">2026 预告</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>2026云顶大会宣传片</h4>
+                                <p>从「联接」走向「价值共创」</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="video-card" data-video="2025">
+                            <div class="video-thumb">
+                                <img src="img-video-2025.jpg" alt="2025云顶大会回顾" onerror="this.style.display='none'">
+                                <div class="video-overlay">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+                                </div>
+                                <div class="video-badge">2025 回顾</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>2025云顶大会精彩回顾</h4>
+                                <p>「联接 让孤岛成为大陆」—— 成都</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="video-card" data-video="2024">
+                            <div class="video-thumb">
+                                <img src="img-video-2024.jpg" alt="2024云顶大会回顾" onerror="this.style.display='none'">
+                                <div class="video-overlay">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+                                </div>
+                                <div class="video-badge">2024 回顾</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>2024云顶大会精华剪辑</h4>
+                                <p>「沿着旧地图，找不到新大陆」—— 青岛</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" id="videoPrev" aria-label="上一个">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="carousel-arrow carousel-next" id="videoNext" aria-label="下一个">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="carousel-dots" id="videoDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作伙伴 -->
+    <section class="section" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Partners</span>
+                <h2 class="section-title">合作伙伴</h2>
+                <p class="section-desc">携手行业领军企业，共创建筑数字化生态</p>
+            </div>
+            <div class="partners-category">
+                <h4>指导单位</h4>
+                <div class="partners-row">
+                    <div class="partner-logo">中国施工企业管理协会</div>
+                    <div class="partner-logo">中国建筑集团（广州）总部</div>
+                </div>
+            </div>
+            <div class="partners-category">
+                <h4>协办单位</h4>
+                <div class="partners-row">
+                    <div class="partner-logo">中国建筑第四工程局有限公司</div>
+                </div>
+            </div>
+            <div class="partners-category">
+                <h4>生态合作伙伴</h4>
+                <div class="partners-row">
+                    <div class="partner-logo">华为</div>
+                    <div class="partner-logo">腾讯云</div>
+                    <div class="partner-logo">阿里云</div>
+                    <div class="partner-logo">广联达</div>
+                    <div class="partner-logo">中建科工</div>
+                    <div class="partner-logo">远大住工</div>
+                </div>
+            </div>
+            <div class="partners-category">
+                <h4>媒体合作伙伴</h4>
+                <div class="partners-row">
+                    <div class="partner-logo">建筑时报</div>
+                    <div class="partner-logo">中国建设报</div>
+                    <div class="partner-logo">36氪</div>
+                    <div class="partner-logo">建筑学报</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="2026云顶大会" class="footer-logo-img">
+                    <p>从「联接」走向「价值共创」<br>让贡献被看见，让价值被认可</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <a href="#about">大会介绍</a>
+                    <a href="#schedule">活动日程</a>
+                    <a href="#guests">活动嘉宾</a>
+                    <a href="#guide">参会指南</a>
+                    <a href="#review">往届回顾</a>
+                </div>
+                <div class="footer-links">
+                    <h4>联系方式</h4>
+                    <a href="mailto:info@yunding2026.com">info@yunding2026.com</a>
+                    <a href="tel:13651280421">路先生 13651280421</a>
+                </div>
+                <div class="footer-qr">
+                    <div class="qr-placeholder">
+                        <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="2" height="2"/><rect x="19" y="14" width="2" height="2"/><rect x="14" y="19" width="2" height="2"/><rect x="19" y="19" width="2" height="2"/></svg>
+                    </div>
+                    <span>关注云筑公众号</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 云筑（中建电子商务有限责任公司） 版权所有</p>
+                <p>主办方：云筑 | 云顶大会组委会</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 视频弹窗 -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-inner">
+            <button class="video-modal-close" id="videoModalClose">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="video-container" id="videoContainer">
+                <div class="video-placeholder">
+                    <svg viewBox="0 0 24 24" width="64" height="64" fill="white" opacity="0.5"><polygon points="8,5 19,12 8,19"/></svg>
+                    <p id="videoModalTitle">视频播放中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
