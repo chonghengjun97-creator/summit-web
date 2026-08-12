@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroParticles();
     initSmoothScroll();
     initScrollReveal();
+    initLightbox();
 });
 
 /* ===== 顶部导航栏滚动效果 ===== */
@@ -261,6 +262,81 @@ function initVideoModal() {
 }
 
 /* ===== 轮播组件 ===== */
+/* ===== 现场图集灯箱 ===== */
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    const img = document.getElementById('lightboxImg');
+    const caption = document.getElementById('lightboxCaption');
+    const counter = document.getElementById('lightboxCounter');
+    const galleryBtns = document.querySelectorAll('.gallery-btn');
+
+    let images = [];
+    let currentIndex = 0;
+    let currentTitle = '';
+
+    function openGallery(dir, count, title) {
+        images = [];
+        for (let i = 1; i <= count; i++) {
+            images.push(`videos/${dir}/${String(i).padStart(2, '0')}.jpg`);
+        }
+        currentTitle = title;
+        currentIndex = 0;
+        showImage();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function showImage() {
+        if (!images.length) return;
+        img.src = images[currentIndex];
+        caption.textContent = `${currentTitle}`;
+        counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        img.src = '';
+    }
+
+    galleryBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const dir = btn.getAttribute('data-gallery');
+            const count = parseInt(btn.getAttribute('data-count'), 10) || 0;
+            const title = btn.getAttribute('data-title') || '现场图集';
+            openGallery(dir, count, title);
+        });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (!images.length) return;
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (!images.length) return;
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage();
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+    });
+}
+
 function initCarousel(carouselId, trackId, prevId, nextId, dotsId) {
     const carousel = document.getElementById(carouselId);
     if (!carousel) return;
