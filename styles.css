@@ -1119,6 +1119,55 @@ button { font-family: inherit; }
     border: 1px solid var(--color-border);
 }
 
+/* 楼层切换按钮 */
+.venue-floor-switch {
+    display: inline-flex;
+    gap: 8px;
+    margin-bottom: var(--space-md);
+    padding: 4px;
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+}
+
+.floor-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.floor-btn:hover {
+    color: var(--color-text);
+}
+
+.floor-btn.active {
+    background: var(--color-text);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+.floor-btn .floor-num {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.floor-btn .floor-name {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
 .venue-svg {
     display: block;
     width: 100%;
@@ -1210,19 +1259,11 @@ button { font-family: inherit; }
 
 .venue-map-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     gap: var(--space-sm);
     padding-top: var(--space-md);
-}
-
-.venue-map-address {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    color: var(--color-text-secondary);
 }
 
 .venue-map-tip {

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavHighlight();
     initCountdown();
     initGuideTabs();
+    initVenueFloorSwitch();
     initGuestsTabs();
     initFAQ();
     initVideoModal();
@@ -170,6 +171,29 @@ function initGuideTabs() {
                 p.classList.remove('active');
                 if (p.getAttribute('data-tab') === target) {
                     p.classList.add('active');
+                }
+            });
+        });
+    });
+}
+
+/* ===== 会场导览 1F / 2F 切换 ===== */
+function initVenueFloorSwitch() {
+    const buttons = document.querySelectorAll('.venue-floor-switch .floor-btn');
+    const svgs = document.querySelectorAll('.venue-map-canvas .venue-svg');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const floor = btn.getAttribute('data-floor');
+
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            svgs.forEach(svg => {
+                if (svg.getAttribute('data-floor') === floor) {
+                    svg.style.display = 'block';
+                } else {
+                    svg.style.display = 'none';
                 }
             });
         });
