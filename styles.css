@@ -29,10 +29,10 @@
     --color-accent-soft: rgba(29, 78, 216, 0.08);
     --color-accent-glow: rgba(29, 78, 216, 0.14);
 
-    /* 排版 */
-    --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+    /* 排版 · HarmonyOS Sans 优先（华为风格），无则回退系统字体 */
+    --font-sans: 'HarmonyOS Sans SC', 'HarmonyOS Sans', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     --font-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', Menlo, monospace;
-    --font-display: 'Noto Sans SC', sans-serif;
+    --font-display: 'HarmonyOS Sans SC', 'HarmonyOS Sans', 'Noto Sans SC', sans-serif;
 
     --max-width: 1320px;               /* HDC 风格的宽容器 */
 
@@ -72,9 +72,10 @@ body {
     font-family: var(--font-sans);
     background-color: var(--color-bg);
     color: var(--color-text);
+    font-variant-numeric: tabular-nums;
     font-size: 15px;
     line-height: 1.65;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -274,14 +275,14 @@ button { font-family: inherit; }
 
 .hero-title {
     margin-bottom: var(--space-md);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.18;
+    letter-spacing: 0;
 }
 
 .title-line {
     display: block;
-    font-size: clamp(56px, 9vw, 96px);
+    font-size: clamp(48px, 8vw, 80px);
     color: var(--color-text);
 }
 
@@ -291,7 +292,7 @@ button { font-family: inherit; }
     font-weight: 300;
     color: var(--color-text-secondary);
     margin-top: var(--space-sm);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
 }
 
 .hero-divider {
@@ -473,11 +474,11 @@ button { font-family: inherit; }
 }
 
 .section-title {
-    font-size: clamp(32px, 4.5vw, 44px);
-    font-weight: 700;
-    line-height: 1.15;
+    font-size: clamp(28px, 3.6vw, 38px);
+    font-weight: 600;
+    line-height: 1.25;
     margin-bottom: var(--space-sm);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--color-text);
 }
 
@@ -485,6 +486,7 @@ button { font-family: inherit; }
     font-size: 15px;
     color: var(--color-text-secondary);
     line-height: 1.7;
+    letter-spacing: 0.01em;
 }
 
 /* =========================================================
@@ -615,7 +617,7 @@ button { font-family: inherit; }
     font-weight: 600;
     margin-bottom: var(--space-sm);
     color: var(--color-text);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 .about-card p {
@@ -641,12 +643,13 @@ button { font-family: inherit; }
 
 .stat-num {
     display: block;
-    font-size: clamp(32px, 4vw, 44px);
-    font-weight: 700;
+    font-size: clamp(28px, 3.6vw, 40px);
+    font-weight: 600;
     color: var(--color-text);
     font-family: var(--font-sans);
-    line-height: 1;
-    letter-spacing: -0.02em;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -976,7 +979,7 @@ button { font-family: inherit; }
     font-weight: 600;
     color: var(--color-text);
     margin-bottom: 6px;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 .guest-title {
@@ -1708,7 +1711,7 @@ button { font-family: inherit; }
     font-size: 17px;
     font-weight: 600;
     color: var(--color-text);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     line-height: 1.35;
 }
 
