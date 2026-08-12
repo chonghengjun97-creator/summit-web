@@ -193,7 +193,7 @@ function initFAQ() {
     });
 }
 
-/* ===== 视频弹窗 ===== */
+/* ===== 视频弹窗（支持本地 mp4 播放） ===== */
 function initVideoModal() {
     const modal = document.getElementById('videoModal');
     const closeBtn = document.getElementById('videoModalClose');
@@ -207,18 +207,48 @@ function initVideoModal() {
         '2024': '2024云顶大会精华剪辑 · 「沿着旧地图，找不到新大陆」'
     };
 
+    let currentVideo = null;
+
     videoCards.forEach(card => {
         card.addEventListener('click', () => {
             const year = card.getAttribute('data-video');
+            const src = card.getAttribute('data-src') || '';
+            const poster = card.getAttribute('data-poster') || '';
             titleEl.textContent = videoData[year] || '视频播放中...';
+
+            // 移除旧的视频元素
+            const oldVideo = container.querySelector('video');
+            if (oldVideo) {
+                oldVideo.pause();
+                oldVideo.remove();
+            }
+
+            if (src) {
+                const video = document.createElement('video');
+                video.setAttribute('controls', '');
+                video.setAttribute('playsinline', '');
+                video.src = src;
+                if (poster) video.setAttribute('poster', poster);
+                currentVideo = video;
+                container.appendChild(video);
+            }
+
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
+            if (currentVideo) currentVideo.play().catch(() => {});
         });
     });
 
     function closeModal() {
         modal.classList.remove('open');
         document.body.style.overflow = '';
+        if (currentVideo) {
+            currentVideo.pause();
+            currentVideo = null;
+        }
+        // 关闭时清空视频元素，避免下次打开残留画面
+        const video = container.querySelector('video');
+        if (video) video.remove();
     }
 
     closeBtn.addEventListener('click', closeModal);
