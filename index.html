@@ -513,215 +513,219 @@
                 <h2 class="section-title">参会指南</h2>
                 <p class="section-desc">全方位参会服务，让您的行程无忧</p>
             </div>
-            <div class="venue-map" id="venue-map">
-                <div class="venue-map-head">
-                    <div>
-                        <div class="venue-map-eyebrow">VENUE MAP · 现场导览</div>
-                        <h4>2026 云顶大会活动现场平面导览图</h4>
-                    </div>
-                    <div class="venue-map-meta">
-                        <span>深圳国际会展中心</span>
-                        <span class="venue-map-divider"></span>
-                        <span>18 号馆 · 一层 / 二层</span>
-                    </div>
-                </div>
-
-                <div class="venue-map-canvas">
-                    <svg class="venue-svg" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gradMain" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#3a5cff"/>
-                                <stop offset="100%" stop-color="#6b3aff"/>
-                            </linearGradient>
-                            <linearGradient id="gradSub" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#0fb39a"/>
-                                <stop offset="100%" stop-color="#0d8a76"/>
-                            </linearGradient>
-                            <linearGradient id="gradEntry" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#1c56f5"/>
-                                <stop offset="100%" stop-color="#0a3cc0"/>
-                            </linearGradient>
-                            <linearGradient id="gradDining" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#f59e0b"/>
-                                <stop offset="100%" stop-color="#f97316"/>
-                            </linearGradient>
-                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e6ecf5" stroke-width="0.5" opacity="0.5"/>
-                            </pattern>
-                            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-                                <feOffset dx="0" dy="3" result="offsetblur"/>
-                                <feComponentTransfer><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
-                                <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
-
-                        <!-- 背景底色 + 网格 -->
-                        <rect x="0" y="0" width="1400" height="760" fill="#f8fafc"/>
-                        <rect x="40" y="40" width="1320" height="640" fill="url(#grid)" opacity="0.6"/>
-                        <rect x="40" y="40" width="1320" height="640" fill="none" stroke="#cfd8e3" stroke-width="1.5" rx="8"/>
-
-                        <!-- 内部车道（贯穿南北） -->
-                        <line x1="40" y1="225" x2="1360" y2="225" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6 6" opacity="0.6"/>
-                        <text x="60" y="220" font-size="11" fill="#94a3b8" letter-spacing="0.15em">内部车道</text>
-
-                        <!-- ============ 西北区域 ============ -->
-                        <!-- 上分会场 -->
-                        <g filter="url(#softShadow)">
-                            <rect x="80" y="80" width="220" height="120" rx="8" fill="url(#gradSub)"/>
-                        </g>
-                        <text x="190" y="128" text-anchor="middle" fill="#fff" font-size="16" font-weight="600">分会场 A</text>
-                        <text x="190" y="150" text-anchor="middle" fill="#c7f5ec" font-size="11" letter-spacing="0.2em">PARALLEL · A</text>
-                        <text x="190" y="180" text-anchor="middle" fill="#ffffff" opacity="0.85" font-size="12">14:30-17:00 平行研讨会</text>
-
-                        <!-- ============ 二楼用餐区（2F） ============ -->
-                        <g filter="url(#softShadow)">
-                            <rect x="340" y="80" width="240" height="120" rx="10" fill="url(#gradDining)"/>
-                            <rect x="340" y="80" width="240" height="6" fill="#fff" opacity="0.35" rx="3"/>
-                        </g>
-                        <circle cx="385" cy="130" r="20" fill="#ffffff" opacity="0.15"/>
-                        <text x="385" y="137" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">2F</text>
-                        <text x="465" y="128" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">二楼 · 用餐区</text>
-                        <text x="465" y="150" text-anchor="middle" fill="#ffe4c4" font-size="11" letter-spacing="0.25em">DINING · 2F</text>
-                        <text x="465" y="180" text-anchor="middle" fill="#ffffff" opacity="0.85" font-size="12">自助午餐 · 茶点 · 休息</text>
-
-                        <!-- WC (右上) -->
-                        <rect x="1250" y="80" width="60" height="40" rx="4" fill="#1f2937"/>
-                        <text x="1280" y="105" text-anchor="middle" fill="#fff" font-size="10">WC</text>
-
-                        <!-- ============ 主会场（核心） ============ -->
-                        <g filter="url(#softShadow)">
-                            <rect x="880" y="155" width="350" height="280" rx="10" fill="url(#gradMain)"/>
-                            <!-- 顶部高光 -->
-                            <rect x="880" y="155" width="350" height="6" fill="#fff" opacity="0.4" rx="3"/>
-                            <!-- 装饰圆点 -->
-                            <circle cx="935" cy="200" r="5" fill="#ffffff" opacity="0.55"/>
-                            <circle cx="955" cy="200" r="5" fill="#ffffff" opacity="0.35"/>
-                            <circle cx="975" cy="200" r="5" fill="#ffffff" opacity="0.25"/>
-                        </g>
-                        <text x="1055" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">主 会 场</text>
-                        <text x="1055" y="265" text-anchor="middle" fill="#cbd5ff" font-size="11" letter-spacing="0.4em">MAIN HALL</text>
-                        <line x1="990" y1="285" x2="1120" y2="285" stroke="#ffffff" opacity="0.4" stroke-width="1"/>
-                        <text x="1055" y="320" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.9">09:00 - 12:00</text>
-                        <text x="1055" y="340" text-anchor="middle" fill="#cbd5ff" font-size="11">主论坛 · 开幕致辞</text>
-                        <text x="1055" y="375" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.9">13:30 - 18:30</text>
-                        <text x="1055" y="395" text-anchor="middle" fill="#cbd5ff" font-size="11">强链补链延链洽谈会</text>
-
-                        <!-- 舞台 -->
-                        <rect x="940" y="405" width="120" height="20" rx="2" fill="#ffffff" opacity="0.65"/>
-                        <text x="1000" y="420" text-anchor="middle" fill="#1c56f5" font-size="10" font-weight="600">舞 台 STAGE</text>
-
-                        <!-- ============ 中部辅助区 ============ -->
-                        <!-- 茶歇 (中部) -->
-                        <rect x="640" y="245" width="90" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-dasharray="4 3"/>
-                        <text x="685" y="268" text-anchor="middle" fill="#92400e" font-size="12" font-weight="600">茶歇</text>
-                        <text x="685" y="281" text-anchor="middle" fill="#a16207" font-size="8" letter-spacing="0.15em">TEA</text>
-
-                        <!-- WC (中) -->
-                        <rect x="790" y="245" width="50" height="42" rx="4" fill="#1f2937"/>
-                        <text x="815" y="268" text-anchor="middle" fill="#fff" font-size="10">WC</text>
-
-                        <!-- ============ 下分会场 ============ -->
-                        <g filter="url(#softShadow)">
-                            <rect x="80" y="380" width="220" height="220" rx="8" fill="url(#gradSub)"/>
-                        </g>
-                        <text x="190" y="450" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">分会场 B</text>
-                        <text x="190" y="475" text-anchor="middle" fill="#c7f5ec" font-size="11" letter-spacing="0.2em">PARALLEL · B</text>
-                        <text x="190" y="515" text-anchor="middle" fill="#ffffff" opacity="0.85" font-size="12">14:30-17:00 平行研讨会</text>
-                        <line x1="120" y1="540" x2="260" y2="540" stroke="#ffffff" opacity="0.4"/>
-                        <text x="190" y="565" text-anchor="middle" fill="#c7f5ec" font-size="10">沙发椅 · 圆桌互动</text>
-
-                        <!-- 签到处 (右上) -->
-                        <g>
-                            <rect x="1180" y="155" width="170" height="50" rx="6" fill="#dc2626"/>
-                        </g>
-                        <text x="1265" y="180" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">签 到 处</text>
-                        <text x="1265" y="195" text-anchor="middle" fill="#fee2e2" font-size="9" letter-spacing="0.2em">SIGN-IN</text>
-
-                        <!-- ============ 登录大厅 ============ -->
-                        <g filter="url(#softShadow)">
-                            <rect x="900" y="600" width="280" height="80" rx="10" fill="url(#gradEntry)"/>
-                        </g>
-                        <text x="1040" y="635" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">登 录 大 厅</text>
-                        <text x="1040" y="655" text-anchor="middle" fill="#bfd6ff" font-size="10" letter-spacing="0.3em">CHECK-IN HALL</text>
-                        <text x="1040" y="672" text-anchor="middle" fill="#fff" opacity="0.75" font-size="10">参会证领取 · 嘉宾接待</text>
-
-                        <!-- ============ 参观动线（红色虚线流动） ============ -->
-                        <g>
-                            <!-- 主路：登录大厅 → 主会场 -->
-                            <path d="M 1040 600 L 1040 470 L 1055 440 L 1055 435" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.9">
-                                <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
-                            </path>
-                            <!-- 平行支线：登录大厅 → 分会场 A -->
-                            <path d="M 1000 600 L 1000 540 L 280 540 L 280 200 L 190 200" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 5" opacity="0.7">
-                                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
-                            </path>
-                            <!-- 平行支线：登录大厅 → 分会场 B -->
-                            <path d="M 1000 600 L 1000 560 L 280 560 L 280 460 L 190 460" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 5" opacity="0.7">
-                                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-                            </path>
-                            <!-- 入口指示箭头 -->
-                            <polygon points="1055,425 1050,435 1060,435" fill="#ef4444"/>
-                            <polygon points="190,200 190,180 200,190 190,200" fill="#ef4444" opacity="0.7"/>
-                            <polygon points="190,460 190,440 200,450 190,460" fill="#ef4444" opacity="0.7"/>
-                            <!-- 扶梯：由此上二楼用餐区 -->
-                            <line x1="460" y1="345" x2="460" y2="216" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 5" opacity="0.8">
-                                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1.8s" repeatCount="indefinite"/>
-                            </line>
-                            <polygon points="460,205 453,216 467,216" fill="#ef4444" opacity="0.9"/>
-                        </g>
-                        <text x="475" y="320" font-size="12" fill="#b45309" font-weight="600">扶梯 · 由此上二楼</text>
-
-                        <!-- 入口标识 -->
-                        <g>
-                            <rect x="1230" y="595" width="60" height="22" rx="11" fill="#ef4444"/>
-                            <text x="1260" y="610" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">入 口</text>
-                        </g>
-
-                        <!-- 北/南指示标 -->
-                        <text x="50" y="65" font-size="11" fill="#94a3b8" letter-spacing="0.2em" font-weight="600">↑ 北</text>
-                        <text x="50" y="708" font-size="11" fill="#94a3b8" letter-spacing="0.2em" font-weight="600">↓ 南</text>
-                    </svg>
-
-                    <!-- 浮动提示 (右上 VR入口) -->
-                    <a class="venue-map-vr" href="https://v2.brandpano.com/pano/T4aCm7tk?scenekey=scenes_epybtpf3ha" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/><path d="M21 12c0 0-3-2-9-2s-9 2-9 2"/><path d="M3 12c0 0 3 2 9 2s9-2 9-2"/></svg>
-                        <span>360° VR 全景</span>
-                    </a>
-                </div>
-
-                <!-- 图例 -->
-                <div class="venue-map-legend">
-                    <div class="legend-item"><span class="lg-chip" style="background:#3a5cff"></span><div><b>主会场</b><span>09:00 - 12:00 · 13:30 - 18:30</span></div></div>
-                    <div class="legend-item"><span class="lg-chip" style="background:#0fb39a"></span><div><b>分会场 A / B</b><span>14:30 - 17:00 平行研讨会</span></div></div>
-                    <div class="legend-item"><span class="lg-chip" style="background:url(#none); border:2px solid #1c56f5"></span><div><b>登录大厅</b><span>参会证领取 · 嘉宾接待</span></div></div>
-                    <div class="legend-item"><span class="lg-chip" style="background:#dc2626"></span><div><b>签到处</b><span>入场签到</span></div></div>
-                    <div class="legend-item"><span class="lg-chip" style="background:#f59e0b"></span><div><b>二楼 · 用餐区</b><span>自助午餐 · 茶点 · 休息</span></div></div>
-                    <div class="legend-item"><span class="lg-chip" style="background:#fef3c7;border:1px dashed #f59e0b"></span><div><b>茶歇区</b><span>中场休息</span></div></div>
-                    <div class="legend-item"><span class="lg-chip" style="background:transparent;border:2px dashed #ef4444"></span><div><b>建议动线</b><span>登录大厅 → 各会场 → 二楼用餐</span></div></div>
-                </div>
-
-                <!-- VR + 地址说明 -->
-                <div class="venue-map-footer">
-                    <div class="venue-map-address">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>广东省深圳市宝安区福海街道和平社区展城路 1 号</span>
-                    </div>
-                    <div class="venue-map-tip">
-                        <span class="venue-map-dot"></span>
-                        动线按建议参观顺序：登录大厅 → 分会场 → 主会场 → 二楼用餐区
-                    </div>
-                </div>
-            </div>
-
             <div class="guide-tabs" id="guideTabs">
-                <button class="tab-btn active" data-tab="traffic">交通出行</button>
+                <button class="tab-btn active" data-tab="venue">会场导览</button>
+                <button class="tab-btn" data-tab="traffic">交通出行</button>
                 <button class="tab-btn" data-tab="hotel">住宿协议</button>
                 <button class="tab-btn" data-tab="food">餐饮指南</button>
                 <button class="tab-btn" data-tab="faq">常见问题</button>
             </div>
             <div class="guide-content" id="guideContent">
-                <div class="guide-panel active" data-tab="traffic">
+            <div class="guide-panel active" data-tab="venue">
+                <div class="venue-map" id="venue-map">
+                    <div class="venue-map-head">
+                        <div>
+                            <div class="venue-map-eyebrow">VENUE MAP · 现场导览</div>
+                            <h4>2026 云顶大会活动现场平面导览图</h4>
+                        </div>
+                        <div class="venue-map-meta">
+                            <span>深圳国际会展中心</span>
+                            <span class="venue-map-divider"></span>
+                            <span>18 号馆 · 一层 / 二层</span>
+                        </div>
+                    </div>
+
+                    <div class="venue-map-canvas">
+                        <svg class="venue-svg" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradMain" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#3a5cff"/>
+                                    <stop offset="100%" stop-color="#6b3aff"/>
+                                </linearGradient>
+                                <linearGradient id="gradSub" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0fb39a"/>
+                                    <stop offset="100%" stop-color="#0d8a76"/>
+                                </linearGradient>
+                                <linearGradient id="gradEntry" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#1c56f5"/>
+                                    <stop offset="100%" stop-color="#0a3cc0"/>
+                                </linearGradient>
+                                <linearGradient id="gradDining" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#f59e0b"/>
+                                    <stop offset="100%" stop-color="#f97316"/>
+                                </linearGradient>
+                                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e6ecf5" stroke-width="0.5" opacity="0.5"/>
+                                </pattern>
+                                <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                                    <feOffset dx="0" dy="3" result="offsetblur"/>
+                                    <feComponentTransfer><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+                                    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                            </defs>
+
+                            <!-- 背景底色 + 网格 -->
+                            <rect x="0" y="0" width="1400" height="760" fill="#f8fafc"/>
+                            <rect x="40" y="40" width="1320" height="640" fill="url(#grid)" opacity="0.6"/>
+                            <rect x="40" y="40" width="1320" height="640" fill="none" stroke="#cfd8e3" stroke-width="1.5" rx="8"/>
+
+                            <!-- 内部车道（贯穿南北） -->
+                            <line x1="40" y1="225" x2="1360" y2="225" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6 6" opacity="0.6"/>
+                            <text x="60" y="220" font-size="11" fill="#94a3b8" letter-spacing="0.15em">内部车道</text>
+
+                            <!-- ============ 西北区域 ============ -->
+                            <!-- 上分会场 -->
+                            <g filter="url(#softShadow)">
+                                <rect x="80" y="80" width="220" height="120" rx="8" fill="url(#gradSub)"/>
+                            </g>
+                            <text x="190" y="128" text-anchor="middle" fill="#fff" font-size="16" font-weight="600">分会场 A</text>
+                            <text x="190" y="150" text-anchor="middle" fill="#c7f5ec" font-size="11" letter-spacing="0.2em">PARALLEL · A</text>
+                            <text x="190" y="180" text-anchor="middle" fill="#ffffff" opacity="0.85" font-size="12">14:30-17:00 平行研讨会</text>
+
+                            <!-- ============ 二楼用餐区（2F） ============ -->
+                            <g filter="url(#softShadow)">
+                                <rect x="340" y="80" width="240" height="120" rx="10" fill="url(#gradDining)"/>
+                                <rect x="340" y="80" width="240" height="6" fill="#fff" opacity="0.35" rx="3"/>
+                            </g>
+                            <circle cx="385" cy="130" r="20" fill="#ffffff" opacity="0.15"/>
+                            <text x="385" y="137" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">2F</text>
+                            <text x="465" y="128" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">二楼 · 用餐区</text>
+                            <text x="465" y="150" text-anchor="middle" fill="#ffe4c4" font-size="11" letter-spacing="0.25em">DINING · 2F</text>
+                            <text x="465" y="180" text-anchor="middle" fill="#ffffff" opacity="0.85" font-size="12">自助午餐 · 茶点 · 休息</text>
+
+                            <!-- WC (右上) -->
+                            <rect x="1250" y="80" width="60" height="40" rx="4" fill="#1f2937"/>
+                            <text x="1280" y="105" text-anchor="middle" fill="#fff" font-size="10">WC</text>
+
+                            <!-- ============ 主会场（核心） ============ -->
+                            <g filter="url(#softShadow)">
+                                <rect x="880" y="155" width="350" height="280" rx="10" fill="url(#gradMain)"/>
+                                <!-- 顶部高光 -->
+                                <rect x="880" y="155" width="350" height="6" fill="#fff" opacity="0.4" rx="3"/>
+                                <!-- 装饰圆点 -->
+                                <circle cx="935" cy="200" r="5" fill="#ffffff" opacity="0.55"/>
+                                <circle cx="955" cy="200" r="5" fill="#ffffff" opacity="0.35"/>
+                                <circle cx="975" cy="200" r="5" fill="#ffffff" opacity="0.25"/>
+                            </g>
+                            <text x="1055" y="240" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">主 会 场</text>
+                            <text x="1055" y="265" text-anchor="middle" fill="#cbd5ff" font-size="11" letter-spacing="0.4em">MAIN HALL</text>
+                            <line x1="990" y1="285" x2="1120" y2="285" stroke="#ffffff" opacity="0.4" stroke-width="1"/>
+                            <text x="1055" y="320" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.9">09:00 - 12:00</text>
+                            <text x="1055" y="340" text-anchor="middle" fill="#cbd5ff" font-size="11">主论坛 · 开幕致辞</text>
+                            <text x="1055" y="375" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.9">13:30 - 18:30</text>
+                            <text x="1055" y="395" text-anchor="middle" fill="#cbd5ff" font-size="11">强链补链延链洽谈会</text>
+
+                            <!-- 舞台 -->
+                            <rect x="940" y="405" width="120" height="20" rx="2" fill="#ffffff" opacity="0.65"/>
+                            <text x="1000" y="420" text-anchor="middle" fill="#1c56f5" font-size="10" font-weight="600">舞 台 STAGE</text>
+
+                            <!-- ============ 中部辅助区 ============ -->
+                            <!-- 茶歇 (中部) -->
+                            <rect x="640" y="245" width="90" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-dasharray="4 3"/>
+                            <text x="685" y="268" text-anchor="middle" fill="#92400e" font-size="12" font-weight="600">茶歇</text>
+                            <text x="685" y="281" text-anchor="middle" fill="#a16207" font-size="8" letter-spacing="0.15em">TEA</text>
+
+                            <!-- WC (中) -->
+                            <rect x="790" y="245" width="50" height="42" rx="4" fill="#1f2937"/>
+                            <text x="815" y="268" text-anchor="middle" fill="#fff" font-size="10">WC</text>
+
+                            <!-- ============ 下分会场 ============ -->
+                            <g filter="url(#softShadow)">
+                                <rect x="80" y="380" width="220" height="220" rx="8" fill="url(#gradSub)"/>
+                            </g>
+                            <text x="190" y="450" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">分会场 B</text>
+                            <text x="190" y="475" text-anchor="middle" fill="#c7f5ec" font-size="11" letter-spacing="0.2em">PARALLEL · B</text>
+                            <text x="190" y="515" text-anchor="middle" fill="#ffffff" opacity="0.85" font-size="12">14:30-17:00 平行研讨会</text>
+                            <line x1="120" y1="540" x2="260" y2="540" stroke="#ffffff" opacity="0.4"/>
+                            <text x="190" y="565" text-anchor="middle" fill="#c7f5ec" font-size="10">沙发椅 · 圆桌互动</text>
+
+                            <!-- 签到处 (右上) -->
+                            <g>
+                                <rect x="1180" y="155" width="170" height="50" rx="6" fill="#dc2626"/>
+                            </g>
+                            <text x="1265" y="180" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">签 到 处</text>
+                            <text x="1265" y="195" text-anchor="middle" fill="#fee2e2" font-size="9" letter-spacing="0.2em">SIGN-IN</text>
+
+                            <!-- ============ 登录大厅 ============ -->
+                            <g filter="url(#softShadow)">
+                                <rect x="900" y="600" width="280" height="80" rx="10" fill="url(#gradEntry)"/>
+                            </g>
+                            <text x="1040" y="635" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">登 录 大 厅</text>
+                            <text x="1040" y="655" text-anchor="middle" fill="#bfd6ff" font-size="10" letter-spacing="0.3em">CHECK-IN HALL</text>
+                            <text x="1040" y="672" text-anchor="middle" fill="#fff" opacity="0.75" font-size="10">参会证领取 · 嘉宾接待</text>
+
+                            <!-- ============ 参观动线（红色虚线流动） ============ -->
+                            <g>
+                                <!-- 主路：登录大厅 → 主会场 -->
+                                <path d="M 1040 600 L 1040 470 L 1055 440 L 1055 435" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.9">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.5s" repeatCount="indefinite"/>
+                                </path>
+                                <!-- 平行支线：登录大厅 → 分会场 A -->
+                                <path d="M 1000 600 L 1000 540 L 280 540 L 280 200 L 190 200" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 5" opacity="0.7">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+                                </path>
+                                <!-- 平行支线：登录大厅 → 分会场 B -->
+                                <path d="M 1000 600 L 1000 560 L 280 560 L 280 460 L 190 460" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 5" opacity="0.7">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                                </path>
+                                <!-- 入口指示箭头 -->
+                                <polygon points="1055,425 1050,435 1060,435" fill="#ef4444"/>
+                                <polygon points="190,200 190,180 200,190 190,200" fill="#ef4444" opacity="0.7"/>
+                                <polygon points="190,460 190,440 200,450 190,460" fill="#ef4444" opacity="0.7"/>
+                                <!-- 扶梯：由此上二楼用餐区 -->
+                                <line x1="460" y1="345" x2="460" y2="216" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 5" opacity="0.8">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1.8s" repeatCount="indefinite"/>
+                                </line>
+                                <polygon points="460,205 453,216 467,216" fill="#ef4444" opacity="0.9"/>
+                            </g>
+                            <text x="475" y="320" font-size="12" fill="#b45309" font-weight="600">扶梯 · 由此上二楼</text>
+
+                            <!-- 入口标识 -->
+                            <g>
+                                <rect x="1230" y="595" width="60" height="22" rx="11" fill="#ef4444"/>
+                                <text x="1260" y="610" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">入 口</text>
+                            </g>
+
+                            <!-- 北/南指示标 -->
+                            <text x="50" y="65" font-size="11" fill="#94a3b8" letter-spacing="0.2em" font-weight="600">↑ 北</text>
+                            <text x="50" y="708" font-size="11" fill="#94a3b8" letter-spacing="0.2em" font-weight="600">↓ 南</text>
+                        </svg>
+
+                        <!-- 浮动提示 (右上 VR入口) -->
+                        <a class="venue-map-vr" href="https://v2.brandpano.com/pano/T4aCm7tk?scenekey=scenes_epybtpf3ha" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/><path d="M21 12c0 0-3-2-9-2s-9 2-9 2"/><path d="M3 12c0 0 3 2 9 2s9-2 9-2"/></svg>
+                            <span>360° VR 全景</span>
+                        </a>
+                    </div>
+
+                    <!-- 图例 -->
+                    <div class="venue-map-legend">
+                        <div class="legend-item"><span class="lg-chip" style="background:#3a5cff"></span><div><b>主会场</b><span>09:00 - 12:00 · 13:30 - 18:30</span></div></div>
+                        <div class="legend-item"><span class="lg-chip" style="background:#0fb39a"></span><div><b>分会场 A / B</b><span>14:30 - 17:00 平行研讨会</span></div></div>
+                        <div class="legend-item"><span class="lg-chip" style="background:url(#none); border:2px solid #1c56f5"></span><div><b>登录大厅</b><span>参会证领取 · 嘉宾接待</span></div></div>
+                        <div class="legend-item"><span class="lg-chip" style="background:#dc2626"></span><div><b>签到处</b><span>入场签到</span></div></div>
+                        <div class="legend-item"><span class="lg-chip" style="background:#f59e0b"></span><div><b>二楼 · 用餐区</b><span>自助午餐 · 茶点 · 休息</span></div></div>
+                        <div class="legend-item"><span class="lg-chip" style="background:#fef3c7;border:1px dashed #f59e0b"></span><div><b>茶歇区</b><span>中场休息</span></div></div>
+                        <div class="legend-item"><span class="lg-chip" style="background:transparent;border:2px dashed #ef4444"></span><div><b>建议动线</b><span>登录大厅 → 各会场 → 二楼用餐</span></div></div>
+                    </div>
+
+                    <!-- VR + 地址说明 -->
+                    <div class="venue-map-footer">
+                        <div class="venue-map-address">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>广东省深圳市宝安区福海街道和平社区展城路 1 号</span>
+                        </div>
+                        <div class="venue-map-tip">
+                            <span class="venue-map-dot"></span>
+                            动线按建议参观顺序：登录大厅 → 分会场 → 主会场 → 二楼用餐区
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+                <div class="guide-panel" data-tab="traffic">
                     <div class="guide-grid">
                         <div class="guide-card">
                             <div class="guide-icon">
