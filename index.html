@@ -21,7 +21,7 @@
                 <a href="#home" class="nav-link active">首页</a>
                 <a href="#about" class="nav-link">大会介绍</a>
                 <a href="#schedule" class="nav-link">活动日程</a>
-                <a href="#guests" class="nav-link">活动嘉宾</a>
+                <a href="#guests" class="nav-link">嘉宾回顾</a>
                 <a href="#guide" class="nav-link">参会指南</a>
                 <a href="#review" class="nav-link">往届回顾</a>
                 <a href="#video" class="nav-link">精彩视频</a>
@@ -78,9 +78,18 @@
                 <p>当前，建筑行业正处于深刻变革与系统性重塑的关键时期，正从"规模红利"滑向"存量博弈"。行业数字化、生态化协同已取得显著进展，但一个更深层的命题亟待回答：<strong>联接之后，价值何往？</strong></p>
                 <p>2026云顶大会致力于推动建筑产业从"联接"走向"价值共创"，与生态伙伴共同探讨如何让贡献被看见、价值被认可，引导资源流向真正创造价值的环节。通过分享行业实践案例、促成实质性供需合作与生态共创，凝聚全行业价值共识。</p>
                 <div class="about-organizers">
-                    <div class="org-item"><span class="org-label">指导单位</span><span>中国施工企业管理协会</span><span>中国建筑集团有限公司（广州）总部</span></div>
-                    <div class="org-item"><span class="org-label">主办单位</span><span>云筑（中建电子商务有限责任公司）</span></div>
-                    <div class="org-item"><span class="org-label">协办单位</span><span>中国建筑第四工程局有限公司</span></div>
+                    <div class="org-item">
+                        <span class="org-label">指导单位</span>
+                        <div class="org-names">中国施工企业管理协会、中国建筑集团有限公司（广州）总部</div>
+                    </div>
+                    <div class="org-item">
+                        <span class="org-label">主办单位</span>
+                        <div class="org-names">云筑（中建电子商务有限责任公司）</div>
+                    </div>
+                    <div class="org-item">
+                        <span class="org-label">协办单位</span>
+                        <div class="org-names">中国建筑第四工程局有限公司</div>
+                    </div>
                 </div>
             </div>
             <div class="about-grid">
@@ -193,19 +202,197 @@
         </div>
     </section>
 
-    <!-- 活动嘉宾 -->
+    <!-- 嘉宾回顾 -->
     <section class="section" id="guests">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Guests</span>
-                <h2 class="section-title">演讲嘉宾</h2>
-                <p class="section-desc">行业领袖齐聚，共话建筑产业新未来</p>
+                <span class="section-tag">Past Guests</span>
+                <h2 class="section-title">历届嘉宾回顾</h2>
+                <p class="section-desc">汇聚行业领袖，共话建筑产业新未来</p>
             </div>
-            <div class="guests-empty">
-                <div class="guests-empty-icon">
-                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+
+            <div class="guests-tabs" id="guestsTabs">
+                <button class="guests-tab is-active" data-year="2025">2025 云顶大会</button>
+                <button class="guests-tab" data-year="2024">2024 云顶大会</button>
+            </div>
+
+            <!-- 2025 云顶大会 -->
+            <div class="guests-panel is-active" data-year="2025">
+                <p class="guests-meta">2025·嘉宾回顾（排序不分先后）</p>
+                <div class="guests-grid">
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/lidaokui.png" alt="李稻葵" loading="lazy"></div>
+                        <div class="guest-name">李稻葵</div>
+                        <div class="guest-title">著名经济学家<br>清华大学中国经济思想与实践研究院院长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangtiehong25.png" alt="王铁宏" loading="lazy"></div>
+                        <div class="guest-name">王铁宏</div>
+                        <div class="guest-title">住房和城乡建设部原总工程师<br>中国建筑业协会原会长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/lifuhe.png" alt="李福和" loading="lazy"></div>
+                        <div class="guest-name">李福和</div>
+                        <div class="guest-title">上海攀成德企业管理顾问有限公司<br>董事长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/zhanjianchao.png" alt="詹建朝" loading="lazy"></div>
+                        <div class="guest-name">詹建朝</div>
+                        <div class="guest-title">九牧厨卫股份有限公司<br>商用副总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangzhanfeng.png" alt="王占峰" loading="lazy"></div>
+                        <div class="guest-name">王占峰</div>
+                        <div class="guest-title">鲁万橡数据科技股份有限公司<br>总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/luxiaowei.png" alt="骆晓伟" loading="lazy"></div>
+                        <div class="guest-name">骆晓伟</div>
+                        <div class="guest-title">中国大地财产保险股份有限公司<br>党委委员、副总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/zhangguangtao.png" alt="张广韬" loading="lazy"></div>
+                        <div class="guest-name">张广韬</div>
+                        <div class="guest-title">中国建筑第八工程局<br>采购管理部总经理</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/cuijingtao.png" alt="崔景焘" loading="lazy"></div>
+                        <div class="guest-name">崔景焘</div>
+                        <div class="guest-title">三棵树涂料股份有限公司<br>副总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/zhaowei.png" alt="赵巍" loading="lazy"></div>
+                        <div class="guest-name">赵&nbsp;巍</div>
+                        <div class="guest-title">腾讯云数字经济与人工智能<br>首席架构师</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/shaohua.png" alt="邵华" loading="lazy"></div>
+                        <div class="guest-name">邵&nbsp;华</div>
+                        <div class="guest-title">陕西建工材料设备物流集团有限公司<br>党委副书记、总经理</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/liutaoran25.png" alt="刘陶然" loading="lazy"></div>
+                        <div class="guest-name">刘陶然</div>
+                        <div class="guest-title">兰格集团<br>总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangguangbin25.png" alt="王广斌" loading="lazy"></div>
+                        <div class="guest-name">王广斌</div>
+                        <div class="guest-title">教授、博士生导师<br>同济大学建筑产业创新发展研究院院长</div>
+                    </div>
                 </div>
-                <p>演讲嘉宾信息持续确认中，敬请期待</p>
+            </div>
+
+            <!-- 2024 云顶大会 -->
+            <div class="guests-panel" data-year="2024">
+                <p class="guests-meta">2024·嘉宾回顾（排序不分先后）</p>
+                <div class="guests-grid">
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangyuzhi.png" alt="王玉志" loading="lazy"></div>
+                        <div class="guest-name">王玉志</div>
+                        <div class="guest-title">山东省住房和城乡建设厅<br>厅长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/liujinzhang.png" alt="刘锦章" loading="lazy"></div>
+                        <div class="guest-name">刘锦章</div>
+                        <div class="guest-title">中国建筑业协会<br>副会长兼秘书长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/shanguangxiu.png" alt="单广袖" loading="lazy"></div>
+                        <div class="guest-name">单广袖</div>
+                        <div class="guest-title">中建集团党组副书记、董事、工会主席</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/mahesheng.png" alt="马合生" loading="lazy"></div>
+                        <div class="guest-name">马合生</div>
+                        <div class="guest-title">中国建筑发展有限公司<br>党委书记、董事长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/taofeng.png" alt="陶锋" loading="lazy"></div>
+                        <div class="guest-name">陶&nbsp;锋</div>
+                        <div class="guest-title">云筑<br>董事长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/yangchongyi.png" alt="杨崇谊" loading="lazy"></div>
+                        <div class="guest-name">杨崇谊</div>
+                        <div class="guest-title">云筑<br>副总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/zhangyong.png" alt="张勇" loading="lazy"></div>
+                        <div class="guest-name">张&nbsp;勇</div>
+                        <div class="guest-title">云筑<br>副总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/zhijianpeng.png" alt="智建鹏" loading="lazy"></div>
+                        <div class="guest-name">智建鹏</div>
+                        <div class="guest-title">云筑<br>总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangtiehong24.png" alt="王铁宏" loading="lazy"></div>
+                        <div class="guest-name">王铁宏</div>
+                        <div class="guest-title">住房和城乡建设部原总工程师<br>中国建筑业协会原会长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/xiaoxuwen.png" alt="肖绪文" loading="lazy"></div>
+                        <div class="guest-name">肖绪文</div>
+                        <div class="guest-title">中国工程院院士<br>中国建筑集团有限公司首席专家</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/chaiyueting.png" alt="柴跃廷" loading="lazy"></div>
+                        <div class="guest-name">柴跃廷</div>
+                        <div class="guest-title">清华大学教授<br>电子商务交易技术国家工程实验室主任</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/chenping.png" alt="陈平" loading="lazy"></div>
+                        <div class="guest-name">陈&nbsp;平</div>
+                        <div class="guest-title">腾讯云<br>副总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/huangbo.png" alt="黄波" loading="lazy"></div>
+                        <div class="guest-name">黄&nbsp;波</div>
+                        <div class="guest-title">中建三局供应链管理部副总经理<br>中建三局云采供应链有限公司董事长</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangyan.png" alt="王燕" loading="lazy"></div>
+                        <div class="guest-name">王&nbsp;燕</div>
+                        <div class="guest-title">中建交通建设集团有限公司<br>采购交易中心总经理</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangxiying.png" alt="王喜营" loading="lazy"></div>
+                        <div class="guest-name">王喜营</div>
+                        <div class="guest-title">中国能建<br>生产与项目管理事业部副总经理</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/xiongyao.png" alt="熊瑶" loading="lazy"></div>
+                        <div class="guest-name">熊&nbsp;瑶</div>
+                        <div class="guest-title">中建商业保理有限公司<br>总经理</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/huangdecheng.png" alt="黄德承" loading="lazy"></div>
+                        <div class="guest-name">黄德承</div>
+                        <div class="guest-title">西南财经大学<br>EMBA客座教授、EPC专家</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/pingqingzhong.png" alt="平庆忠" loading="lazy"></div>
+                        <div class="guest-name">平庆忠</div>
+                        <div class="guest-title">清华大学互联网产业研究院产经平台经济首席专家<br>中国招标投标公共服务平台原总经理、首席经济学家</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/leike.png" alt="雷克" loading="lazy"></div>
+                        <div class="guest-name">雷&nbsp;克</div>
+                        <div class="guest-title">中建八局龙图蚂蚁集团（信息化）<br>总经理</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/liutaoran24.png" alt="刘陶然" loading="lazy"></div>
+                        <div class="guest-name">刘陶然</div>
+                        <div class="guest-title">兰格集团<br>总裁</div>
+                    </div>
+                    <div class="guest-card">
+                        <div class="guest-avatar"><img src="img-past-guests/wangguangbin24.png" alt="王广斌" loading="lazy"></div>
+                        <div class="guest-name">王广斌</div>
+                        <div class="guest-title">教授、博士生导师<br>同济大学建筑产业创新发展研究院院长</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -599,7 +786,7 @@
                     <ul>
                         <li><a href="#about">大会介绍</a></li>
                         <li><a href="#schedule">活动日程</a></li>
-                        <li><a href="#guests">活动嘉宾</a></li>
+                        <li><a href="#guests">嘉宾回顾</a></li>
                         <li><a href="#guide">参会指南</a></li>
                         <li><a href="#review">往届回顾</a></li>
                     </ul>

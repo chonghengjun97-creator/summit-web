@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavHighlight();
     initCountdown();
     initGuideTabs();
+    initGuestsTabs();
     initFAQ();
     initVideoModal();
     initCarousel('reviewCarousel', 'reviewTrack', 'reviewPrev', 'reviewNext', 'reviewDots');
@@ -169,6 +170,28 @@ function initGuideTabs() {
                 p.classList.remove('active');
                 if (p.getAttribute('data-tab') === target) {
                     p.classList.add('active');
+                }
+            });
+        });
+    });
+}
+
+/* ===== 历届嘉宾Tab切换 ===== */
+function initGuestsTabs() {
+    const tabs = document.querySelectorAll('#guestsTabs .guests-tab');
+    const panels = document.querySelectorAll('.guests-panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const year = tab.getAttribute('data-year');
+
+            tabs.forEach(t => t.classList.remove('is-active'));
+            tab.classList.add('is-active');
+
+            panels.forEach(p => {
+                p.classList.remove('is-active');
+                if (p.getAttribute('data-year') === year) {
+                    p.classList.add('is-active');
                 }
             });
         });
