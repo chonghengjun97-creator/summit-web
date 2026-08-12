@@ -514,20 +514,28 @@ button { font-family: inherit; }
     border-radius: var(--radius-md);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    gap: var(--space-xl);
 }
 
 .org-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
 }
 
 .org-label {
     font-weight: 600;
     color: var(--color-accent-bright);
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+}
+
+.org-names {
+    font-size: 13px;
+    color: var(--color-text);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    word-break: keep-all;
 }
 
 .org-item > span:not(.org-label) {
@@ -535,17 +543,15 @@ button { font-family: inherit; }
     color: var(--color-text);
     line-height: 1.5;
 }
-.org-name-primary {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--color-text);
-    margin-top: 2px;
-    letter-spacing: 0.04em;
-}
-.org-name-secondary {
+.org-name {
     font-size: 13px;
-    color: var(--color-text-secondary);
-    margin-top: 4px;
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+.org-name + .org-name {
+    margin-top: 6px;
 }
 
 .about-grid {
