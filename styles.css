@@ -73,8 +73,8 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-variant-numeric: tabular-nums;
-    font-size: 15px;
-    line-height: 1.65;
+    font-size: 16px;
+    line-height: 1.7;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -140,13 +140,14 @@ button { font-family: inherit; }
 
 .nav-link {
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     color: var(--color-text-secondary);
     border-radius: var(--radius-sm);
     transition: var(--transition-fast);
     position: relative;
     white-space: nowrap;
+    letter-spacing: 0;
 }
 
 .nav-link:hover {
@@ -254,10 +255,10 @@ button { font-family: inherit; }
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 18px;
+    padding: 7px 20px;
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-pill);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--color-text-secondary);
     letter-spacing: 0.1em;
@@ -276,20 +277,20 @@ button { font-family: inherit; }
 .hero-title {
     margin-bottom: var(--space-md);
     font-weight: 600;
-    line-height: 1.18;
+    line-height: 1.15;
     letter-spacing: 0;
 }
 
 .title-line {
     display: block;
-    font-size: clamp(48px, 8vw, 80px);
+    font-size: clamp(56px, 9vw, 104px);
     color: var(--color-text);
 }
 
 .title-sub {
     display: block;
-    font-size: clamp(18px, 2.4vw, 24px);
-    font-weight: 300;
+    font-size: clamp(20px, 2.6vw, 28px);
+    font-weight: 400;
     color: var(--color-text-secondary);
     margin-top: var(--space-sm);
     letter-spacing: 0.02em;
@@ -312,8 +313,8 @@ button { font-family: inherit; }
 
 .hero-tags span {
     display: inline-block;
-    padding: 3px 12px;
-    font-size: 12px;
+    padding: 5px 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--color-accent);
     background: rgba(28, 86, 245, 0.06);
@@ -334,11 +335,11 @@ button { font-family: inherit; }
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 14px 32px;
+    padding: 16px 36px;
     border-radius: var(--radius-pill);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     transition: var(--transition);
     cursor: pointer;
     border: 1px solid transparent;
@@ -388,7 +389,7 @@ button { font-family: inherit; }
 }
 
 .count-num {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--color-text);
     font-variant-numeric: tabular-nums;
@@ -396,7 +397,7 @@ button { font-family: inherit; }
 }
 
 .count-label {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--color-text-tertiary);
     letter-spacing: 0.1em;
 }
@@ -474,19 +475,19 @@ button { font-family: inherit; }
 }
 
 .section-title {
-    font-size: clamp(28px, 3.6vw, 38px);
+    font-size: clamp(40px, 5vw, 56px);
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.2;
     margin-bottom: var(--space-sm);
     letter-spacing: 0;
     color: var(--color-text);
 }
 
 .section-desc {
-    font-size: 15px;
+    font-size: 18px;
     color: var(--color-text-secondary);
     line-height: 1.7;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
 }
 
 /* =========================================================
@@ -498,10 +499,11 @@ button { font-family: inherit; }
 }
 
 .about-intro p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.85;
     color: var(--color-text-secondary);
     margin-bottom: var(--space-md);
+    letter-spacing: 0;
 }
 
 .about-intro strong {
@@ -528,29 +530,29 @@ button { font-family: inherit; }
 .org-label {
     font-weight: 600;
     color: var(--color-accent-bright);
-    font-size: 13px;
-    letter-spacing: 0.08em;
+    font-size: 14px;
+    letter-spacing: 0.05em;
 }
 
 .org-names {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text);
     line-height: 1.7;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
     word-break: keep-all;
 }
 
 .org-item > span:not(.org-label) {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--color-text);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 .org-name {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--color-text);
     line-height: 1.7;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
 }
 .org-name + .org-name {
     margin-top: 6px;
@@ -613,17 +615,18 @@ button { font-family: inherit; }
 }
 
 .about-card h3 {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: var(--space-sm);
     color: var(--color-text);
     letter-spacing: 0;
+    line-height: 1.4;
 }
 
 .about-card p {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 /* Stats · HDC 风格横排 */
@@ -643,11 +646,11 @@ button { font-family: inherit; }
 
 .stat-num {
     display: block;
-    font-size: clamp(28px, 3.6vw, 40px);
+    font-size: clamp(40px, 5vw, 64px);
     font-weight: 600;
     color: var(--color-text);
     font-family: var(--font-sans);
-    line-height: 1.2;
+    line-height: 1.1;
     letter-spacing: 0;
     font-variant-numeric: tabular-nums;
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%);
@@ -658,7 +661,7 @@ button { font-family: inherit; }
 
 .stat-label {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--color-text-tertiary);
     margin-top: var(--space-xs);
     letter-spacing: 0.15em;
@@ -763,8 +766,8 @@ button { font-family: inherit; }
 }
 
 .timeline-time {
-    width: 100px;
-    font-size: 13px;
+    width: 110px;
+    font-size: 15px;
     color: var(--color-text-tertiary);
     text-align: right;
     font-family: var(--font-mono);
@@ -800,9 +803,9 @@ button { font-family: inherit; }
 
 .timeline-tag {
     display: inline-block;
-    padding: 2px 10px;
+    padding: 4px 12px;
     border-radius: var(--radius-pill);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.1em;
     margin-bottom: var(--space-xs);
@@ -816,15 +819,18 @@ button { font-family: inherit; }
 }
 
 .timeline-card h4 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 4px;
     color: var(--color-text);
+    letter-spacing: 0;
+    line-height: 1.4;
 }
 
 .timeline-card p {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
+    letter-spacing: 0;
 }
 
 /* =========================================================
@@ -975,15 +981,16 @@ button { font-family: inherit; }
 }
 
 .guest-name {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--color-text);
     margin-bottom: 6px;
     letter-spacing: 0;
+    line-height: 1.35;
 }
 
 .guest-title {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--color-text-secondary);
     line-height: 1.7;
     padding: 0 4px;
@@ -1031,24 +1038,27 @@ button { font-family: inherit; }
 }
 
 .guide-card h4 {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: var(--space-sm);
     color: var(--color-text);
+    letter-spacing: 0;
+    line-height: 1.35;
 }
 
 .guide-card ul {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .guide-card li {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
     position: relative;
     padding-left: 14px;
     line-height: 1.7;
+    letter-spacing: 0;
 }
 
 .guide-card li::before {
@@ -1089,7 +1099,7 @@ button { font-family: inherit; }
 }
 
 .venue-map-eyebrow {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.25em;
     color: var(--color-accent-bright);
@@ -1097,19 +1107,21 @@ button { font-family: inherit; }
 }
 
 .venue-map h4 {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--color-text);
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
+    line-height: 1.3;
 }
 
 .venue-map-meta {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
+    margin-top: 4px;
 }
 
 .venue-map-divider {
@@ -1143,11 +1155,11 @@ button { font-family: inherit; }
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 16px;
+    padding: 8px 20px;
     border: 0;
     background: transparent;
     color: var(--color-text-secondary);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     border-radius: var(--radius-pill);
     cursor: pointer;
@@ -1168,12 +1180,12 @@ button { font-family: inherit; }
 .floor-btn .floor-num {
     font-family: var(--font-mono);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.05em;
 }
 
 .floor-btn .floor-name {
-    font-size: 12px;
+    font-size: 13px;
     opacity: 0.85;
 }
 
@@ -1250,7 +1262,7 @@ button { font-family: inherit; }
 }
 
 .legend-item b {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--color-text-secondary);
     line-height: 1.2;
@@ -1274,10 +1286,10 @@ button { font-family: inherit; }
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 12px;
+    padding: 7px 16px;
     background: rgba(28, 86, 245, 0.06);
     border-radius: var(--radius-pill);
-    font-size: 12px;
+    font-size: 13px;
     color: var(--color-accent-bright);
 }
 
@@ -1355,8 +1367,8 @@ button { font-family: inherit; }
 .hotel-badge {
     display: inline-block;
     align-self: flex-start;
-    padding: 4px 10px;
-    font-size: 11px;
+    padding: 5px 14px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.1em;
     color: var(--color-accent-bright);
@@ -1366,10 +1378,11 @@ button { font-family: inherit; }
 }
 
 .hotel-info h4 {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 600;
     color: var(--color-text);
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
+    line-height: 1.2;
 }
 
 .hotel-benefits {
@@ -1381,8 +1394,8 @@ button { font-family: inherit; }
 
 .hotel-benefits span {
     display: inline-block;
-    padding: 3px 12px;
-    font-size: 12px;
+    padding: 5px 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--color-accent);
     background: rgba(28, 86, 245, 0.06);
@@ -1391,10 +1404,11 @@ button { font-family: inherit; }
 }
 
 .hotel-info-desc {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-text-secondary);
     line-height: 1.8;
     margin-bottom: var(--space-md);
+    letter-spacing: 0;
 }
 
 .hotel-info-meta { display: none; }
@@ -1411,9 +1425,10 @@ button { font-family: inherit; }
 .hotel-rules li {
     position: relative;
     padding-left: var(--space-md);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.7;
     color: var(--color-text-secondary);
+    letter-spacing: 0;
 }
 
 .hotel-rules li::before {
@@ -1546,21 +1561,24 @@ button { font-family: inherit; }
 }
 
 .food-card h4 {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: var(--space-sm);
     color: var(--color-text);
+    letter-spacing: 0;
+    line-height: 1.35;
 }
 
 .food-card p {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: 1.75;
     margin-bottom: var(--space-sm);
+    letter-spacing: 0;
 }
 
 .food-time {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--color-text-tertiary);
     font-family: var(--font-mono);
 }
@@ -1599,11 +1617,12 @@ button { font-family: inherit; }
     background: transparent;
     border: none;
     color: var(--color-text);
-    font-size: 15px;
+    font-size: 17px;
     cursor: pointer;
     text-align: left;
     transition: var(--transition-fast);
     font-weight: 500;
+    letter-spacing: 0;
 }
 
 .faq-question:hover {
@@ -1699,7 +1718,7 @@ button { font-family: inherit; }
 }
 
 .review-location {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--color-accent-bright);
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -1708,11 +1727,11 @@ button { font-family: inherit; }
 }
 
 .review-head h4 {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--color-text);
     letter-spacing: 0;
-    line-height: 1.35;
+    line-height: 1.3;
 }
 
 .review-meta {
@@ -1891,9 +1910,9 @@ button { font-family: inherit; }
     position: absolute;
     top: 12px;
     left: 12px;
-    padding: 4px 12px;
+    padding: 5px 14px;
     border-radius: var(--radius-pill);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.95);
     color: var(--color-text);
@@ -1908,16 +1927,18 @@ button { font-family: inherit; }
 }
 
 .video-info h4 {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 4px;
     color: var(--color-text);
+    letter-spacing: 0;
+    line-height: 1.4;
 }
 
 .video-info p {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--color-text-tertiary);
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 /* Video Modal */
@@ -2423,17 +2444,17 @@ button { font-family: inherit; }
 }
 
 .footer-brand p {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
     line-height: 1.85;
 }
 
 .footer-col h5 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: var(--space-md);
     color: var(--color-text);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
@@ -2444,7 +2465,7 @@ button { font-family: inherit; }
 }
 
 .footer-col a {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--color-text-secondary);
     transition: var(--transition-fast);
     display: inline-block;
