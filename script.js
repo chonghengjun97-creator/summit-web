@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initGuestsTabs();
     initFAQ();
     initVideoModal();
-    initCarousel('reviewCarousel', 'reviewTrack', 'reviewPrev', 'reviewNext', 'reviewDots');
+    initReviewTabs();
     initCarousel('videoCarousel', 'videoTrack', 'videoPrev', 'videoNext', 'videoDots');
     initHeroParticles();
     initSmoothScroll();
@@ -226,7 +226,6 @@ function initVideoModal() {
     const videoCards = document.querySelectorAll('.video-card');
 
     const videoData = {
-        '2026': '2026云顶大会宣传片 · 从「联接」走向「价值共创」',
         '2025': '2025云顶大会精彩回顾 · 「联接 让孤岛成为大陆」',
         '2024': '2024云顶大会精华剪辑 · 「沿着旧地图，找不到新大陆」'
     };
@@ -301,13 +300,13 @@ function initLightbox() {
     let currentIndex = 0;
     let currentTitle = '';
 
-    function openGallery(dir, count, title) {
+    function openGallery(dir, count, title, startIndex) {
         images = [];
         for (let i = 1; i <= count; i++) {
             images.push(`videos/${dir}/${String(i).padStart(2, '0')}.jpg`);
         }
         currentTitle = title;
-        currentIndex = 0;
+        currentIndex = startIndex || 0;
         showImage();
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
@@ -332,7 +331,21 @@ function initLightbox() {
             const dir = btn.getAttribute('data-gallery');
             const count = parseInt(btn.getAttribute('data-count'), 10) || 0;
             const title = btn.getAttribute('data-title') || '现场图集';
-            openGallery(dir, count, title);
+            openGallery(dir, count, title, 0);
+        });
+    });
+
+    // 缩略图点击：直达 lightbox 对应图
+    document.querySelectorAll('.review-thumbs img').forEach(thumb => {
+        thumb.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const track = thumb.closest('.review-thumbs');
+            if (!track) return;
+            const dir = track.getAttribute('data-gallery');
+            const count = parseInt(track.getAttribute('data-count'), 10) || 0;
+            const title = track.getAttribute('data-title') || '现场图集';
+            const idx = parseInt(thumb.getAttribute('data-index'), 10) || 0;
+            openGallery(dir, count, title, idx);
         });
     });
 
@@ -357,6 +370,21 @@ function initLightbox() {
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') prevBtn.click();
         if (e.key === 'ArrowRight') nextBtn.click();
+    });
+}
+
+function initReviewTabs() {
+    const tabs = document.querySelectorAll('#reviewTabs .review-tab');
+    if (!tabs.length) return;
+    const panels = document.querySelectorAll('.review-panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('is-active'));
+            tab.classList.add('is-active');
+            const year = tab.getAttribute('data-year');
+            panels.forEach(p => p.classList.toggle('is-active', p.getAttribute('data-year') === year));
+        });
     });
 }
 
