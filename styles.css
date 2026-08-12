@@ -126,7 +126,6 @@ button { font-family: inherit; }
 .logo-img {
     height: 36px;
     width: auto;
-    max-width: 240px;
     display: block;
 }
 
@@ -2195,8 +2194,6 @@ button { font-family: inherit; }
 .partners-grid.tier-strategic .partner-card img,
 .partners-grid.tier-strategic .partner-card picture {
     max-height: 90px;
-    width: auto;
-    max-width: 100%;
 }
 
 .partners-grid.tier-diamond {
@@ -2419,7 +2416,6 @@ button { font-family: inherit; }
     display: block;
     height: 40px;
     width: auto;
-    max-width: 260px;
     margin-bottom: var(--space-md);
 }
 
