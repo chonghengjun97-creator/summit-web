@@ -6,3 +6,9 @@ node_modules/
 .playwright-cli/
 hdc-fullpage.png
 hdc-section2.png
+
+# 超过 GitHub 100MB 单文件限制的大视频（不含已跟踪的 2024/2025.mp4）
+videos/2026-hero.mp4
+videos/2026-theme.mp4
+videos/云顶大会形象片《你的要强 让中国更强》定稿.mp4
+videos/云顶大会主题片《翻山越海 敢向云顶》.mov

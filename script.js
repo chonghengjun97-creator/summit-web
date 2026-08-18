@@ -250,6 +250,8 @@ function initVideoModal() {
     const videoCards = document.querySelectorAll('.video-card');
 
     const videoData = {
+        '2026-hero': '云顶大会形象片 · 「你的要强 让中国更强」',
+        '2026-theme': '云顶大会主题片 · 「翻山越海 敢向云顶」',
         '2025': '2025云顶大会精彩回顾 · 「联接 让孤岛成为大陆」',
         '2024': '2024云顶大会精华剪辑 · 「沿着旧地图，找不到新大陆」'
     };
