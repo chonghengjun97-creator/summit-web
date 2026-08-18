@@ -2576,7 +2576,8 @@ button { font-family: inherit; }
     gap: var(--space-sm);
 }
 
-.qr-placeholder {
+.qr-placeholder,
+.qr-image {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2587,6 +2588,10 @@ button { font-family: inherit; }
     border-radius: var(--radius-md);
     color: var(--color-text-tertiary);
     flex-shrink: 0;
+}
+
+.qr-image {
+    object-fit: cover;
 }
 
 .footer-qr span {
