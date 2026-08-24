@@ -1323,6 +1323,8 @@ button { font-family: inherit; }
     .legend-item.legend-tip { grid-column: 1 / -1; }
     .venue-map-vr { top: 8px; right: 8px; padding: 6px 10px; font-size: 11px; }
     .venue-map-footer { flex-direction: column; align-items: flex-start; }
+
+    /* 住宿区：双列改单列，二维码全宽 —— 实际规则定义在 .hotel-qr-grid 之后 */
 }
 
 .map-placeholder {
@@ -1357,11 +1359,8 @@ button { font-family: inherit; }
 }
 
 .hotel-feature {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: var(--space-xl);
-    align-items: center;
-    padding: var(--space-lg) var(--space-xl);
+    display: block;
+    padding: 16px 24px;
     background: var(--color-bg-subtle);
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
@@ -1370,8 +1369,8 @@ button { font-family: inherit; }
 .hotel-info-head {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-md);
+    gap: 6px;
+    margin-bottom: 8px;
 }
 
 .hotel-badge {
@@ -1459,18 +1458,35 @@ button { font-family: inherit; }
     gap: var(--space-md);
 }
 
+.hotel-qr-grid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.hotel-qr-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 16px 18px;
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
 .hotel-qr-box {
-    padding: var(--space-sm);
+    padding: 0;
     background: #ffffff;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-border);
+    line-height: 0;
 }
 
 .hotel-qr-box img {
     display: block;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -1479,8 +1495,8 @@ button { font-family: inherit; }
 }
 
 .hotel-qr-title {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     color: var(--color-text);
     margin-bottom: 4px;
 }
@@ -1489,6 +1505,34 @@ button { font-family: inherit; }
     font-size: 12px;
     color: var(--color-text-tertiary);
     letter-spacing: 0.08em;
+}
+
+.hotel-qr-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.hotel-qr-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d4ed8;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+}
+
+/* 移动端：住宿区单列布局（必须放在 .hotel-qr-grid 定义之后，避免被覆盖） */
+@media (max-width: 768px) {
+    .hotel-qr-grid { grid-template-columns: 1fr; gap: 14px; }
+    .hotel-qr-card { padding: 18px 16px 16px; }
+    .hotel-qr-box img { width: 100%; max-width: 260px; height: auto; aspect-ratio: 1; margin: 0 auto; }
 }
 
 .hotel-card {
@@ -1585,6 +1629,39 @@ button { font-family: inherit; }
     line-height: 1.75;
     margin-bottom: var(--space-sm);
     letter-spacing: 0;
+}
+
+.food-list {
+    list-style: none;
+    margin: 0 0 var(--space-sm);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.food-list li {
+    position: relative;
+    padding-left: 14px;
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+}
+
+.food-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+.food-list strong {
+    color: var(--color-text);
+    font-weight: 600;
 }
 
 .food-time {
