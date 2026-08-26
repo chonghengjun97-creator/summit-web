@@ -700,8 +700,16 @@ button { font-family: inherit; }
     color: #fff;
 }
 
-.schedule-day { display: none; }
-.schedule-day.active { display: block; }
+.schedule-panel { display: none; }
+.schedule-panel.active { display: block; }
+
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
 
 .schedule-block {
     margin-bottom: var(--space-2xl, 48px);
@@ -728,6 +736,29 @@ button { font-family: inherit; }
     height: 18px;
     background: var(--primary, #1f5fa8);
     border-radius: 2px;
+}
+.schedule-block-meta {
+    max-width: 720px;
+    margin: -14px auto var(--space-lg, 24px);
+    padding-left: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-size: 0.9rem;
+    color: var(--text-2, #4a5568);
+    line-height: 1.6;
+}
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+.meta-item .mi {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: var(--primary, #1f5fa8);
 }
 .schedule-block-desc {
     max-width: 720px;
@@ -833,49 +864,16 @@ button { font-family: inherit; }
     letter-spacing: 0;
 }
 
+.timeline-speaker {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-accent-bright);
+}
+
 /* =========================================================
-   Guests · 历届嘉宾回顾
+   Guests · 历届嘉宾回顾（嘉宾卡片样式，嵌入在 review section 内）
    ========================================================= */
-.guests-tabs {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-lg);
-}
-
-.guests-tab {
-    padding: 10px 26px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-pill);
-    background: transparent;
-    color: var(--color-text-secondary);
-    font-size: 13px;
-    font-family: var(--font-sans);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    letter-spacing: 0.05em;
-}
-
-.guests-tab:hover {
-    color: var(--color-text);
-    border-color: var(--color-border-strong);
-}
-
-.guests-tab.is-active {
-    background: var(--color-text);
-    border-color: var(--color-text);
-    color: #fff;
-}
-
-.guests-panel {
-    display: none;
-    animation: guestsFadeIn .35s ease both;
-}
-
-.guests-panel.is-active {
-    display: block;
-}
-
 @keyframes guestsFadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -893,6 +891,7 @@ button { font-family: inherit; }
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 @media (max-width: 960px) {
@@ -952,6 +951,80 @@ button { font-family: inherit; }
 }
 
 .guest-title {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    padding: 0 4px;
+}
+
+/* =========================================================
+   演讲嘉宾
+   ========================================================= */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+@media (max-width: 960px) {
+    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .speakers-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+}
+
+.speaker-card {
+    text-align: center;
+    padding: var(--space-lg) var(--space-sm) var(--space-md);
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+.speaker-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-strong);
+}
+
+/* 头像：圆形 + 极淡外圈 + 柔和阴影，无金色装饰 */
+.speaker-avatar {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto var(--space-sm);
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.08),
+        0 10px 22px -16px rgba(15, 23, 42, 0.22);
+    transition: var(--transition);
+}
+.speaker-card:hover .speaker-avatar {
+    transform: scale(1.04);
+    box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.14),
+        0 18px 36px -16px rgba(15, 23, 42, 0.28);
+}
+
+.speaker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.speaker-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.speaker-title {
     font-size: 13px;
     color: var(--color-text-secondary);
     line-height: 1.7;
@@ -1763,7 +1836,8 @@ button { font-family: inherit; }
     justify-content: space-between;
     gap: var(--space-md);
     flex-wrap: wrap;
-    padding: 0 4px var(--space-sm);
+    padding: var(--space-lg) 4px var(--space-md);
+    border-top: 1px solid var(--color-border);
 }
 
 .review-location {
