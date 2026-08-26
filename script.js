@@ -326,10 +326,14 @@ function initLightbox() {
     let currentIndex = 0;
     let currentTitle = '';
 
-    function openGallery(dir, count, title, startIndex) {
-        images = [];
-        for (let i = 1; i <= count; i++) {
-            images.push(`videos/${dir}/${String(i).padStart(2, '0')}.jpg`);
+    function openGallery(dir, count, title, startIndex, srcList) {
+        if (srcList && srcList.length) {
+            images = srcList.slice();
+        } else {
+            images = [];
+            for (let i = 1; i <= count; i++) {
+                images.push(`videos/${dir}/${String(i).padStart(2, '0')}.jpg`);
+            }
         }
         currentTitle = title;
         currentIndex = startIndex || 0;
@@ -361,7 +365,7 @@ function initLightbox() {
         });
     });
 
-    // 缩略图点击：直达 lightbox 对应图
+    // 缩略图点击：lightbox 顺序与缩略图 DOM 顺序一致
     document.querySelectorAll('.review-thumbs img').forEach(thumb => {
         thumb.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -371,7 +375,9 @@ function initLightbox() {
             const count = parseInt(track.getAttribute('data-count'), 10) || 0;
             const title = track.getAttribute('data-title') || '现场图集';
             const idx = parseInt(thumb.getAttribute('data-index'), 10) || 0;
-            openGallery(dir, count, title, idx);
+            // 把整条缩略图轨道的 src 作为 lightbox 顺序，保证点开后的图与缩略图一一对应
+            const srcList = Array.from(track.querySelectorAll('img')).map(img => img.getAttribute('src'));
+            openGallery(dir, count, title, idx, srcList);
         });
     });
 
