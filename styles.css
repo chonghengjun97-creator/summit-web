@@ -283,8 +283,12 @@ button { font-family: inherit; }
 
 .title-line {
     display: block;
-    font-size: clamp(56px, 9vw, 104px);
+    font-size: clamp(40px, 9vw, 104px);
     color: var(--color-text);
+    /* 允许中文在词间断行，避免"大会"单独一行 */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.1;
 }
 
 .title-sub {
@@ -2808,13 +2812,14 @@ button { font-family: inherit; }
     .nav {
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(255, 255, 255, 0.96);
+        background: #ffffff;
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: var(--space-md);
+        z-index: 99;
         opacity: 0;
         pointer-events: none;
         transition: var(--transition);
@@ -2896,4 +2901,28 @@ button { font-family: inherit; }
     .stats-row { grid-template-columns: 1fr 1fr; }
     .partner-card { font-size: 12px; padding: 12px; }
     .section-title { font-size: 28px; }
+
+    /* 标题主行：在 480 以下更紧凑，确保不出现"大会"独占一行的尴尬断行 */
+    .title-line { font-size: clamp(38px, 11vw, 56px); letter-spacing: -0.01em; }
+    .title-sub { font-size: clamp(15px, 4.5vw, 22px); }
+    .hero-eyebrow { font-size: 12px; padding: 6px 14px; margin-bottom: var(--space-md); }
+    .hero-tags { gap: 6px; }
+    .hero-tags span { font-size: 12px; padding: 4px 12px; }
+    .hero-actions { width: 100%; }
+    .hero-actions .btn { flex: 1 1 auto; min-width: 0; padding: 14px 18px; font-size: 14px; }
+    .hero { padding-left: var(--space-md); padding-right: var(--space-md); }
+    .countdown { padding: 8px 14px; }
+    .countdown-item { gap: 2px; }
+}
+
+@media (max-width: 360px) {
+    /* iPhone SE/小屏安卓：进一步压缩 hero 与按钮 */
+    .title-line { font-size: 34px; }
+    .title-sub { font-size: 15px; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions .btn { width: 100%; }
+    .countdown { padding: 6px 10px; gap: 4px; }
+    .count-num { font-size: 14px; }
+    .count-label { font-size: 9px; }
+    .countdown-divider { margin: 0 2px; }
 }
