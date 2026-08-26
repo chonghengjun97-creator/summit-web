@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavHighlight();
     initCountdown();
     initGuideTabs();
+    initScheduleTabs();
     initVenueFloorSwitch();
-    initGuestsTabs();
     initFAQ();
     initVideoModal();
     initReviewTabs();
@@ -177,6 +177,28 @@ function initGuideTabs() {
     });
 }
 
+/* ===== 日程Tab切换 ===== */
+function initScheduleTabs() {
+    const tabs = document.querySelectorAll('#scheduleContent .schedule-tabs .tab-btn');
+    const panels = document.querySelectorAll('#scheduleContent .schedule-panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab');
+
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            panels.forEach(p => {
+                p.classList.remove('active');
+                if (p.getAttribute('data-tab') === target) {
+                    p.classList.add('active');
+                }
+            });
+        });
+    });
+}
+
 /* ===== 会场导览 1F / 2F 切换 ===== */
 function initVenueFloorSwitch() {
     const buttons = document.querySelectorAll('.venue-floor-switch .floor-btn');
@@ -194,28 +216,6 @@ function initVenueFloorSwitch() {
                     svg.style.display = 'block';
                 } else {
                     svg.style.display = 'none';
-                }
-            });
-        });
-    });
-}
-
-/* ===== 历届嘉宾Tab切换 ===== */
-function initGuestsTabs() {
-    const tabs = document.querySelectorAll('#guestsTabs .guests-tab');
-    const panels = document.querySelectorAll('.guests-panel');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const year = tab.getAttribute('data-year');
-
-            tabs.forEach(t => t.classList.remove('is-active'));
-            tab.classList.add('is-active');
-
-            panels.forEach(p => {
-                p.classList.remove('is-active');
-                if (p.getAttribute('data-year') === year) {
-                    p.classList.add('is-active');
                 }
             });
         });
