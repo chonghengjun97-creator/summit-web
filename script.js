@@ -43,19 +43,52 @@ function initMobileMenu() {
     const toggle = document.getElementById('menuToggle');
     const nav = document.getElementById('nav');
 
+    function openDrawer() {
+        toggle.classList.add('active');
+        nav.classList.add('open');
+        document.body.classList.add('nav-open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+        toggle.classList.remove('active');
+        nav.classList.remove('open');
+        document.body.classList.remove('nav-open');
+        document.body.style.overflow = '';
+    }
+
     toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        nav.classList.toggle('open');
-        document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+        if (nav.classList.contains('open')) {
+            closeDrawer();
+        } else {
+            openDrawer();
+        }
     });
 
-    // 点击导航链接后关闭菜单
+    // 点击导航链接后关闭菜单并手动滚动到目标：
+    // 必须延迟关闭，避免 iOS Safari 上同步关闭抽屉 + 解锁 body 会打断正在进行的 hash 跳转动画
     nav.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            toggle.classList.remove('active');
-            nav.classList.remove('open');
-            document.body.style.overflow = '';
+        link.addEventListener('click', (e) => {
+            const hash = link.getAttribute('href');
+            // 关闭抽屉（延迟一帧，让浏览器有机会先注册 hashchange / 开始滚动）
+            requestAnimationFrame(() => {
+                closeDrawer();
+                if (hash && hash.startsWith('#') && hash.length > 1) {
+                    const target = document.querySelector(hash);
+                    if (target) {
+                        // 显式兜底滚动，iOS 上比依赖浏览器默认 href 更可靠
+                        setTimeout(() => {
+                            const y = target.getBoundingClientRect().top + window.scrollY - 72;
+                            window.scrollTo({ top: y, behavior: 'smooth' });
+                        }, 60);
+                    }
+                }
+            });
         });
+    });
+
+    // ESC 也可关闭
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) closeDrawer();
     });
 }
 

@@ -2846,9 +2846,21 @@ button { font-family: inherit; }
     .menu-toggle { display: flex; z-index: 201; }
     .logo { z-index: 201; }
 
-    /* 抽屉打开时锁定整页滚动，避免抽屉和正文一起被手指拖动 */
-    body.nav-open { overflow: hidden; touch-action: none; }
+    /* 抽屉打开时锁定整页滚动，避免抽屉和正文一起被手指拖动
+       注意：不加 touch-action: none，否则 iOS 会顺带禁用抽屉内部的滚动与点击 */
+    body.nav-open { overflow: hidden; }
     html.nav-open { overflow: hidden; }
+
+    /* 移动端链接优化：tap 高亮去除 + iOS Safari 滑动优化 */
+    .nav-link {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    /* iOS Safari 滑动加速（兼容旧版 Safari） */
+    .nav {
+        -webkit-overflow-scrolling: touch;
+    }
 
     .section { padding-left: var(--space-md); padding-right: var(--space-md); }
     .footer { padding-left: var(--space-md); padding-right: var(--space-md); }
