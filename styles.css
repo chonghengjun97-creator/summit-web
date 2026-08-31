@@ -293,12 +293,60 @@ button { font-family: inherit; }
 
 .title-sub {
     display: block;
-    font-size: clamp(20px, 2.6vw, 28px);
-    font-weight: 400;
-    color: var(--color-text-secondary);
+    font-size: clamp(17px, 1.9vw, 22px);
+    font-weight: 500;
+    color: var(--color-text);
     margin-top: var(--space-sm);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    white-space: nowrap;
 }
+.ts-pipe {
+    display: inline-block;
+    width: 3px;
+    height: 1.1em;
+    vertical-align: -0.12em;
+    margin-right: 12px;
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+.title-slogan {
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(17px, 1.9vw, 22px);
+    font-weight: 600;
+    color: var(--color-accent-bright);
+    margin-top: 18px;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+.title-slogan::before,
+.title-slogan::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-bright));
+}
+.title-slogan::before {
+    margin-right: 14px;
+    background: linear-gradient(90deg, var(--color-accent-bright), transparent);
+}
+.title-slogan::after {
+    margin-left: 14px;
+}
+.title-slogan i {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 2px;
+}
+    vertical-align: -0.12em;
+    margin-right: 12px;
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
 
 .hero-divider {
     width: 32px;
