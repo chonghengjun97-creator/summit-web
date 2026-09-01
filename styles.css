@@ -2465,9 +2465,10 @@ button { font-family: inherit; }
     min-height: 100px;
 }
 
-/* 铂金：一行 4 个等宽 */
+/* 铂金：自适应列数，整体居中排布 */
 .partners-grid.tier-platinum {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 320px));
+    justify-content: center;
 }
 
 /* 黄金：一行 5 个等宽 */
