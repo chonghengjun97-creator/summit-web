@@ -2455,9 +2455,10 @@ button { font-family: inherit; }
     gap: 16px;
 }
 
-/* 钻石：独占整行 */
+/* 钻石：独占整行（支持 1 或 2 个 LOGO 居中） */
 .partners-grid.tier-diamond {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+    justify-content: center;
 }
 
 .partners-grid.tier-diamond .partner-card {
@@ -2743,7 +2744,7 @@ button { font-family: inherit; }
 
     .partners-grid.tier-platinum { grid-template-columns: repeat(2, 1fr); }
     .partners-grid.tier-gold { grid-template-columns: repeat(3, 1fr); }
-    .partners-grid.tier-diamond { grid-template-columns: 1fr; }
+    .partners-grid.tier-diamond { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
