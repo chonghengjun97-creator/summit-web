@@ -2897,3 +2897,72 @@ button { font-family: inherit; }
     .count-label { font-size: 9px; }
     .countdown-divider { margin: 0 2px; }
 }
+
+/* ================= 参会单位 ================= */
+.units-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: stretch;
+}
+
+.units-col {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+    border-radius: var(--radius-lg, 16px);
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+}
+
+.units-col-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%);
+}
+
+.units-col-head .units-badge {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.units-col-head .units-count {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+}
+
+.units-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    max-height: 460px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.units-list li {
+    padding: 8px 20px;
+    font-size: 14px;
+    color: var(--color-text, #1a1a1a);
+    line-height: 1.6;
+    border-bottom: 1px dashed var(--color-border, rgba(0,0,0,0.06));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.units-list li:last-child { border-bottom: none; }
+.units-list li:hover { background: rgba(0,0,0,0.03); }
+
+.units-list::-webkit-scrollbar { width: 6px; }
+.units-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+.units-list::-webkit-scrollbar-track { background: transparent; }
+
+@media (max-width: 768px) {
+    .units-grid { grid-template-columns: 1fr; }
+    .units-list { max-height: 340px; }
+    .units-list li { white-space: normal; }
+}
