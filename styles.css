@@ -2936,17 +2936,17 @@ button { font-family: inherit; }
     scrollbar-width: thin;
 }
 
-/* 合并版：CSS 多栏排布，竖向滚动 */
+/* 合并版：Grid 三栏排布，竖向滚动 */
 .units-merged {
-    columns: 3;
-    column-gap: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-content: start;
     padding: 0;
 }
 
 .units-merged li {
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
     padding: 7px 20px;
+    min-width: 0;
 }
 
 .units-list li {
@@ -2967,13 +2967,13 @@ button { font-family: inherit; }
 .units-list::-webkit-scrollbar-track { background: transparent; }
 
 @media (max-width: 900px) {
-    .units-merged { columns: 2; }
+    .units-merged { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .units-list { max-height: 480px; }
     .units-list li { white-space: normal; }
 }
 
 @media (max-width: 768px) {
-    .units-merged { columns: 1; }
+    .units-merged { grid-template-columns: 1fr; }
     .units-list { max-height: 420px; }
     .units-list li { white-space: normal; }
 }
