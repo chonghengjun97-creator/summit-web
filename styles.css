@@ -923,6 +923,19 @@ button { font-family: inherit; }
     color: var(--color-accent-bright);
 }
 
+.timeline-issues {
+    margin: 10px 0 0;
+    padding: 0 0 0 18px;
+    list-style: disc;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.timeline-issues li {
+    margin: 2px 0;
+}
+
 /* =========================================================
    Guests · 历届嘉宾回顾（嘉宾卡片样式，嵌入在 review section 内）
    ========================================================= */
