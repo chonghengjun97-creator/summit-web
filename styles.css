@@ -2899,14 +2899,7 @@ button { font-family: inherit; }
 }
 
 /* ================= 参会单位 ================= */
-.units-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
-    align-items: stretch;
-}
-
-.units-col {
+.units-block {
     background: var(--color-surface, #ffffff);
     border: 1px solid var(--color-border, rgba(0,0,0,0.08));
     border-radius: var(--radius-lg, 16px);
@@ -2914,7 +2907,7 @@ button { font-family: inherit; }
     box-shadow: 0 8px 30px rgba(0,0,0,0.04);
 }
 
-.units-col-head {
+.units-block-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2922,14 +2915,14 @@ button { font-family: inherit; }
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%);
 }
 
-.units-col-head .units-badge {
+.units-block-head .units-badge {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.02em;
 }
 
-.units-col-head .units-count {
+.units-block-head .units-count {
     color: rgba(255,255,255,0.9);
     font-size: 13px;
 }
@@ -2938,13 +2931,25 @@ button { font-family: inherit; }
     list-style: none;
     margin: 0;
     padding: 6px 0;
-    max-height: 460px;
+    max-height: 520px;
     overflow-y: auto;
     scrollbar-width: thin;
 }
 
+/* 合并版：CSS 多栏排布，竖向滚动 */
+.units-merged {
+    columns: 3;
+    column-gap: 0;
+    padding: 0;
+}
+
+.units-merged li {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    padding: 7px 20px;
+}
+
 .units-list li {
-    padding: 8px 20px;
     font-size: 14px;
     color: var(--color-text, #1a1a1a);
     line-height: 1.6;
@@ -2961,8 +2966,14 @@ button { font-family: inherit; }
 .units-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
 .units-list::-webkit-scrollbar-track { background: transparent; }
 
+@media (max-width: 900px) {
+    .units-merged { columns: 2; }
+    .units-list { max-height: 480px; }
+    .units-list li { white-space: normal; }
+}
+
 @media (max-width: 768px) {
-    .units-grid { grid-template-columns: 1fr; }
-    .units-list { max-height: 340px; }
+    .units-merged { columns: 1; }
+    .units-list { max-height: 420px; }
     .units-list li { white-space: normal; }
 }
